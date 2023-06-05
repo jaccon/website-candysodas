@@ -1,0 +1,42 @@
+[
+  {
+    "id" : "6e9df260-d289-11ed-afa1-0242ac120002",
+    "name" : "Kátia Nakashima",
+    "description" : "Resolveram meu problema de performance no site e me ajudaram no aplicativo. Recomendo",
+    "featuredImage" : "avtar-14.jpg",
+    "ocupation" : "Designer",
+    "status" : "aprooved"
+  },
+  {
+    "id" : "6e9df260-d289-11ed-afa1-0242ac120002",
+    "name" : "Alexandre Nogueira",
+    "description" : "Depois que migrei do Wordpress para o Pagefai meu site ficou extremamente mais rápido",
+    "featuredImage" : "avtar-13.jpg",
+    "ocupation" : "CTO",
+    "status" : "aprooved"
+  },
+  {
+    "id" : "6e9df260-d289-11ed-afa1-0242ac120002",
+    "name" : "Alisson Mendes",
+    "description" : "Migramos nosso site e aplicativo para a Pagefai e consegui uma redução de 60% no custo",
+    "featuredImage" : "avtar-15.jpg",
+    "ocupation" : "Diretor de Marketing",
+    "status" : "aprooved"
+  },
+  {
+    "id" : "6e9df260-d289-11ed-afa1-0242ac120002",
+    "name" : "Takeda Hiroshi",
+    "description" : "Já precisei de atendimento as duas da manhã e consegui falar pessoalmente com o time ",
+    "featuredImage" : "avtar-16.jpg",
+    "ocupation" : "Designer Gráfico",
+    "status" : "aprooved"
+  },
+  {
+    "id" : "6e9df260-d289-11ed-afa1-0242ac120002",
+    "name" : "Wanderley da Silva",
+    "description" : "O melhor de São Paulo, confira",
+    "featuredImage" : "avtar-15.jpg",
+    "ocupation" : "Arquiteto",
+    "status" : "aprooved"
+  }
+]

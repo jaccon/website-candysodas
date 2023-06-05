@@ -1,0 +1,31 @@
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteBase /
+
+# Add WWW
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Redirect to Home when request is empty
+RewriteRule ^$ /index.html [L]
+
+# === Start Rewrites Core
+RewriteRule ^sender$ sender.php [L]
+RewriteRule ^payment.html$ pages/commerce-payment.php [L]
+RewriteRule ^post-([0-9]+) pages/post.php?id=$1
+RewriteRule ^p/([0-9a-fA-F-]+)\.html$ pages/product.template.php?id=$1 [L]
+RewriteRule ^cart.html$ pages/cart.template.php
+RewriteRule ^checkout.html$ pages/checkout.template.php [L]
+RewriteRule ^thank-you.html$ pages/thank-you.template.php [L]
+RewriteRule ^order-tracking/(.*)$ pages/order-tracking.template.php?id=$1
+RewriteRule ^pay-pix.html$ pages/payment-pix.template.php [L]
+RewriteRule ^(.*).html$ pages/$1.template\.php  [L]
+# === End Rewrites Core
+
+# Error 404 
+ErrorDocument 404 /404.html
+
+# Sitemap XML
+RewriteRule ^sitemap.xml$ core/sitemaps/sitemap.php [L]
+# === End Rewrite Custom
+

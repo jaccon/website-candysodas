@@ -1,0 +1,50 @@
+[
+  {
+    "id" : "0608f566-cc20-11ed-afa1-0242ac120002",
+      "title" : "Candy Sodas - Home",
+      "slug" : "Candy Sodas - Home",
+      "description" : "Página da home do site",
+      "content" : "",
+      "status" : "enabled",
+      "featuredImage" : "",
+      "pageBackground" : ""
+  },
+  {
+    "id" : "f38ff21c-c5ea-11ed-afa1-0242ac120002",
+    "title" : "Sobre",
+      "slug" : "Sobre Nós",
+      "description" : "Na Casa 8 Arquitetura e Design, a sofisticação do ambiente é uma das principais metas em cada projeto",
+      "content" : "Acreditamos que um ambiente sofisticado é aquele que reflete a personalidade e o estilo de vida do cliente, ao mesmo tempo em que apresenta elementos de design elegantes e exclusivos. Para alcançar esse objetivo, nossa equipe de arquitetos e designers trabalha de perto com os clientes para entender suas necessidades e desejos, bem como seus gostos pessoais. <br/><br/> A partir daí, criamos projetos personalizados que integram tecnologias e            materiais inovadores, soluções de iluminação eficientes e elegantes, e elementos de            design únicos que refletem a estética e a personalidade do cliente. <br/><br/> Nós também nos esforçamos para criar espaços acolhedores e confortáveis, que            convidam à interação e ao relaxamento. Buscamos equilibrar a sofisticação com a            funcionalidade, criando ambientes que são ao mesmo tempo elegantes e práticos. <br/><br/> Se você está buscando um ambiente sofisticado e exclusivo para sua casa, a Casa 8            Arquitetura e Design está pronta para ajudá-lo a alcançar essa meta. Entre em contato            conosco para agendar uma consulta inicial e começar a planejar o projeto dos seus sonhos.",
+      "status" : "enabled",
+      "featuredImage" : "#",
+      "pageBackground" : "slide2.jpg"
+  },
+  {
+    "id" : "e7675e7a-c5ff-11ed-afa1-0242ac120002",
+    "title" : "Contato",
+      "slug" : "Contato",
+      "description" : "",
+      "content" : "Efficiently promote empowered solutions rather than functional applications. Collaboratively build enterprise-wide content via reliable platforms. Dynamically supply wireless architectures with intermandated methods of empowerment.",
+      "status" : "enabled",
+      "pageBackground" : "slide3.jpg",
+      "googleMap" : "<iframe src=\\\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2sAngfuzsoft!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd\\\"\n                    allowfullscreen=\\\"\\\" loading=\\\"lazy\\\"></iframe>"
+  },
+  {
+    "id" : "17458ff2-c788-11ed-afa1-0242ac120002",
+    "title" : "Clientes",
+      "slug" : "Clientes",
+      "description" : "",
+      "content" : "",
+      "status" : "enabled",
+      "pageBackground" : "slide2.jpg"
+  },
+  {
+    "id" : "c32e85e4-cc51-11ed-afa1-0242ac120002",
+    "title" : "Contato",
+      "slug" : "Contato",
+      "description" : "",
+      "content" : "",
+      "status" : "enabled",
+      "pageBackground" : "assets/img/breadcumb/breadcrumb02.jpg"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id" : "40e01410-c781-11ed-afa1-0242ac120002",
+    "title" : "Search Engine Optimization",
+    "description" : "Conteúdos de Search Engine Optimization",
+    "status" : "enabled"
+  },
+  {
+    "id" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
+    "title" : "header",
+    "description" : "Componentes do Cabeçalho do site",
+    "status" : "enabled"
+  },
+  {
+    "id" : "5b3a41ac-d1ca-11ed-afa1-0242ac120002",
+    "title" : "social media links",
+    "description" : "links das redes sociais",
+    "status" : "enabled"
+  },
+  {
+    "id" : "72f58b40-c783-11ed-afa1-0242ac120002",
+    "title" : "Footer",
+    "description" : "Componentes do rodapé",
+    "status" : "enabled"
+  },
+  {
+    "id" : "c34755c6-c786-11ed-afa1-0242ac120002",
+    "title" : "Social Media Links",
+    "description" : "Links das Redes Sociais",
+    "status" : "enabled"
+  },
+  {
+    "id" : "0f7c54e2-c78b-11ed-afa1-0242ac120002",
+    "title" : "Google Maps",
+    "description" : "Mapa que é apresentado na página de contatos",
+    "status" : "enabled"
+  },
+  {
+    "id" : "de8cdc86-c78e-11ed-afa1-0242ac120002",
+    "title" : "Contato",
+    "description" : "Componente de Contatos",
+    "status" : "enabled"
+  },
+  {
+    "id" : "0b59e998-c848-11ed-afa1-0242ac120002",
+    "title" : "Slideshow",
+    "description" : "Componente do slider dos banners principais",
+    "status" : "enabled"
+  },
+  {
+    "id" : "47a1cd0c-c84e-11ed-afa1-0242ac120002",
+    "title" : "Componente 2",
+    "description" : "Componente 2 da home",
+    "status" : "enabled"
+  },
+  {
+    "id" : "526c3036-c864-11ed-afa1-0242ac120002",
+    "title" : "Banner 03 - Chamada Ifood",
+    "description" : "Banner do Ifood",
+    "status" : "enabled"
+  },
+  {
+    "id" : "eb75a398-c8c8-11ed-afa1-0242ac120002",
+    "title" : "Whatsapp Button",
+    "description" : "Botão do Whatsapp",
+    "status" : "enabled"
+  },
+  {
+    "id" : "65ea3eb6-c920-11ed-afa1-0242ac120002",
+    "title" : "Menu Principal",
+    "description" : "Menu Principal",
+    "status" : "enabled"
+  },
+  {
+    "id" : "65ea3eb6-c920-11ed-afa1-0242ac1200023",
+    "title" : "Menu Footer Quickly",
+    "description" : "Links Rápidos",
+    "status" : "enabled"
+  },
+  {
+    "id" : "65ea3eb6-c920-11ed-afa1-0242ac1200021",
+    "title" : "Menu Footer Cardápio",
+    "description" : "Cardápio",
+    "status" : "enabled"
+  },
+  {
+    "id" : "909c7e5a-dd91-11ed-b5ea-0242ac120002",
+    "title" : "Component About Home",
+    "metadataType" : "componentAboutHome",
+    "description" : "Short description about company",
+    "status" : "enabled"
+  },
+  {
+    "id" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "cid" : "65ea3eb6-c920-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMenuMeta",
+    "itens" : {
+      "Home" : "/index.html",
+      "Quem Somos" : "/quem-somos.html",
+      "Cardápio Online" : "/cardapio.html",
+      "Instagram" : "https://www.instagram.com/dona_ana_doceesalgados/",
+      "Contato" : "/contato.html"
+    }
+  },
+  {
+    "id" : "877c9096-0300-11ee-be56-0242ac120002",
+    "cid" : "877c9096-0300-11ee-be56-0242ac120002",
+    "title" : "Component Clientes",
+    "metadataType" : "componentCustomersLogos",
+    "description" : "Componente para logotipos de clientes",
+    "status" : "enabled"
+  }
+  
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "id" : "0ff54848-c781-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "cId" : "40e01410-c781-11ed-afa1-0242ac120002",
+    "title" : "Search Engine Optimization",
+    "description" : "Componente utilizado para gerenciamento de SEO",
+    "defaultPageTitle" : "Casa 8 - Arquitetura e Interiores",
+    "defaultSiteDescription" : "Casa 8 - Arquitetura e Interiores",
+    "content" : "Casa 8 - Arquitetura e Interiores",
+    "keywords" : "Arquitetura residencial, Interiores de luxo, Design de interiores, Decoração de interiores, Arquitetura de interiores, Projetos arquitetônicos, Arquitetura comercial, Reformas e renovações, Espaços funcionais, Design contemporâneo, Espaços verdes, Sustentabilidade, Mobiliário personalizado, Iluminação de interiores, Projeto de cozinha, Projeto de banheiro, Estilo de vida moderno, Estilo de vida de luxo, Projetos de hotelaria, Projeto de paisagismo",
+    "author" : "Casa 8 Arquitetura",
+    "robots" : "/robots.txt",
+    "favicon" : "images/favicon.png"
+  },
+  {
+    "id" : "b9c29334-d1c8-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
+    "title" : "Header Top Menu",
+    "email" : "contato@casa8arquitetura.com.br",
+    "telString" : "(11) 2729-7297",
+    "telNumber" : "+551127297297",
+    "address" : "Rua dos Capitães Mores, 306 Mooca <br/> Cep: 03167-030",
+    "whatsapp" : "+5511997297297",
+    "whatsappMessage" : "Encontrei o contato através do site..."
+  },
+  {
+    "id" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "cid" : "65ea3eb6-c920-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMenuMeta",
+    "menuItens" : {
+      "Home" : "/index.html",
+      "Sobre" : "/sobre.html",
+      "Clientes" : "/clientes.html",
+      "Projetos" : "/projetos.html",
+      "Contato" : "/contato.html",
+      "Área do Cliente" : "#"
+    }
+  },
+  {
+    "id" : "67f0861c-c848-11ed-afa1-0242ac120002",
+    "cid" : "0b59e998-c848-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Slider",
+    "slider1Img" : "slide1.jpg",
+    "slider1Txt" : "Casa 8 Arquitetura e Design",
+    "slider1Desc" : "Arquitetura",
+    "slider2Img" : "slide2.jpg",
+    "slider2Txt" : "Casa 8 Arquitetura e Design",
+    "slider2Desc" : "Design",
+    "slider3Img" : "slide2.jpg",
+    "slider3Txt" : "Casa 8 Arquitetura e Design",
+    "slider3Desc" : "Sofisticação"
+  },
+  {
+    "id" : "ac392262-dd91-11ed-b5ea-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Arquitetura e Interiores",
+    "description" : "Na Casa 8 Arquitetura e Design, a sofisticação do ambiente é uma das principais metas em cada projeto. Acreditamos que um ambiente sofisticado é aquele que reflete a personalidade e o estilo de vida do cliente, ao mesmo tempo em que apresenta elementos de design elegantes e exclusivos"
+  },
+  {
+    "id" : "650660fe-01d0-11ee-be56-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Carrousel de Marcar",
+    "description" : "",
+    "images" : {
+      "img1" : "clientes-sucos-sa.jpg",
+      "img2" : "clientes-loja-tim.jpg",
+      "img3" : "clientes-subway.jpg",
+      "img4" : "clientes-divino-fogao.jpg"
+    }
+  },
+  {
+    "id" : "7884bde4-0282-11ee-be56-0242ac120002",
+    "cId" : "453bbe46-c921-11ed-afa1-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Carrousel de Logotipos de Clientes",
+    "description" : "",
+    "images" : {
+      "img1" : "logotipo-clientes-1.jpg",
+      "img2" : "logotipo-clientes-2.jpg",
+      "img3" : "logotipo-clientes-3.jpg",
+      "img4" : "logotipo-clientes-4.jpg",
+      "img5" : "logotipo-clientes-5.jpg",
+      "img6" : "logotipo-clientes-6.jpg",
+      "img7" : "logotipo-clientes-7.jpg",
+      "img8" : "logotipo-clientes-8.jpg"
+    }
+  },
+  {
+    "id" : "3780618a-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Claro",
+    "featuredImage" : "logotipo-clientes-1.jpg"
+  },
+  {
+    "id" : "b426e4b6-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Vivo",
+    "featuredImage" : "logotipo-clientes-2.jpg"
+  },
+  {
+    "id" : "d65d038a-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "TIM",
+    "featuredImage" : "logotipo-clientes-3.jpg"
+  },
+  {
+    "id" : "dfaec766-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Bobs",
+    "featuredImage" : "logotipo-clientes-4.jpg"
+  },
+  {
+    "id" : "f0b22576-0300-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Camicado",
+    "featuredImage" : "logotipo-clientes-5.jpg"
+  },
+  {
+    "id" : "0433c708-0301-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Cacau Show",
+    "featuredImage" : "logotipo-clientes-6.jpg"
+  },
+  {
+    "id" : "1b1ed372-0301-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Carmen Steffens",
+    "featuredImage" : "logotipo-clientes-7.jpg"
+  },
+  {
+    "id" : "309d517e-0301-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Logotipos de Clientes",
+    "slug" : "Vivara",
+    "featuredImage" : "logotipo-clientes-8.jpg"
+  }
+]

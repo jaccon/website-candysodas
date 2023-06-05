@@ -1,0 +1,8 @@
+[
+  {
+    "id" : "aca3671e-fe9b-11ed-be56-0242ac120002",
+    "name" : "SEO blacklist",
+    "description" : "SEO indexer blacklist",
+    "blacklist" : "404.html,cart.html,checkout.html,payment-pix.html,payment-pix.html,thank-you.html,.DS_Store,commerce-payment.html,http://localhost:8918/commerce-payment3.html"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id" : "06ffcf54-d660-11ed-afa1-0242ac120002",
+    "category" : "shipping",
+    "title" : "Shipping Minimum Amount",
+    "description" : "valor minímo de compra no e-commerce",
+    "amount" : "40.00"
+  },
+  {
+    "id" : "5e6abe42-d670-11ed-afa1-0242ac120002",
+    "category" : "shipping",
+    "title" : "Shipping Method Standart",
+    "Slug" : "Entrega em domícilio",
+    "description" : "Método de Entrega Motoboy",
+    "amount" : "15.00",
+    "status" : "enabled"
+  },
+  {
+    "id" : "8a77a02c-d670-11ed-afa1-0242ac120002",
+    "category" : "shipping",
+    "title" : "Shipping Method Free",
+    "Slug" : "Retirar no Local",
+    "description" : "Método de Entrega retirada",
+    "amount" : "0.00",
+    "status" : "enabled"
+  },
+  {
+    "id" : "de0860bc-dcd5-11ed-afa1-0242ac120002",
+    "category" : "paymentMethod",
+    "title" : "Pague na Entrega ( Débito / Crédito )",
+    "Slug" : "Pague na Entrega ( Débito / Crédito )",
+    "description" : "Pagamento ( Débito / Crédito ) efetuado para entregador. Não aceitamos pagamentos em dinheiro não insista",
+    "minimumAmount" : "0.00",
+    "status" : "enabled"
+  },
+  {
+    "id" : "fba1c66c-dcd6-11ed-afa1-0242ac120002",
+    "category" : "paymentMethod",
+    "title" : "Pagar com PIX",
+    "Slug" : "Pagar com PIX",
+    "description" : "Você efetua o pagamento por PIX e nós enviamos após a confirmação da transferência",
+    "minimumAmount" : "0.00",
+    "pixKey" : "26532649864",
+    "city" : "São Paulo",
+    "status" : "enabled"
+  },
+  {
+    "id" : "ca280992-dcd7-11ed-afa1-0242ac120002",
+    "category" : "paymentMethod",
+    "title" : "Mercado Pago ( Crédito, Débito, Pix, Vale Refeição )",
+    "Slug" : "Mercado Pago ( Crédito, Débito, Pix, Vale Refeição )",
+    "description" : "Utilize o Mercado Pago para efetuar o pagamento de seu pedido",
+    "minimumAmount" : "0.00",
+    "status" : "enabled"
+  },
+  {
+    "id" : "daa548ea-f152-11ed-a05b-0242ac120003",
+    "category" : "seo",
+    "title" : "Search Engine Optimization",
+    "Slug" : "AI para conteúdos, AI para publishers, Pagefai CMS, Pagefai Content Management System, Integração Sales Force Commerce Cloud, Aplicativo em Assinatura, Sites Incríveis",
+    "description" : "AI para conteúdos, AI para publishers, Pagefai CMS, Pagefai Content Management System, Integração Sales Force Commerce Cloud, Aplicativo em Assinatura, Sites Incríveis,Software house, Desenvolvimento de aplicativos, Desenvolvimento de websites, Cloud computing, Soluções em nuvem, Arquitetura de software, Programação web, Desenvolvimento mobile, Integração de sistemas, Segurança da informação, Hospedagem em nuvem, Infraestrutura escalável, Plataformas digitais, Desenvolvimento ágil, UX/UI design, Manutenção de software, Otimização de desempenho, Gerenciamento de projetos, Consultoria tecnológica, Análise de requisitos",
+    "status" : "enabled"
+  },
+  {
+    "id" : "925d2964-fd04-11ed-be56-0242ac120002",
+    "category" : "Currency Default",
+    "title" : "Default Currency",
+    "currency" : "R$",
+    "description" : "",
+    "status" : "enabled"
+  }
+]
