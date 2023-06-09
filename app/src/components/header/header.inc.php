@@ -15,6 +15,7 @@ $email = CMS::isComponent($metaId,"email");
 $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
 
 ?>
+
 <header class="pb-md-4 pb-0">
         <div class="header-top">
             <div class="container-fluid-lg">
@@ -94,7 +95,7 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                             </button>
-                            <a href="index.html" class="web-logo nav-logo">
+                            <a href="<?= $siteUrl; ?>" class="web-logo nav-logo">
                                 <img src="<?= $siteUrl; ?>/assets/images/logotipo.png" class="img-fluid blur-up lazyload" alt="">
                             </a>
 
@@ -103,11 +104,33 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
 
                                 <div class="search-box">
                                     <div class="input-group">
-                                        <input type="search" class="form-control" placeholder="Procurar por..."
-                                            aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <button class="btn" type="button" id="button-addon2">
+                                        <input type="search" 
+                                            class="form-control" 
+                                            placeholder="Procurar por..."
+                                            aria-label="Search" 
+                                            aria-describedby="button-addon2"
+                                            value=""
+                                            name="search"
+                                            id="searchString"
+                                        >
+
+                                        <button class="btn" 
+                                                type="button" 
+                                                id="searchSubmit"
+                                                onclick="handleSearchClick()"
+                                        >
                                             <i data-feather="search"></i>
                                         </button>
+
+                                        <script>
+                                            function handleSearchClick() {
+                                                var searchString = $('#searchString').val();
+                                                var searchString = $('input[name="search"]').val();
+                                                var url = '/search.html?search=' + encodeURIComponent(searchString);
+                                                window.location.href = url;
+                                            }
+                                        </script>
+
                                     </div>
                                 </div>
                             </div>
@@ -337,3 +360,5 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
             </div>
         </div>
     </header>
+
+ 

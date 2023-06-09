@@ -290,6 +290,26 @@ class Commerce {
       
     }
 
+    static public function searchProducts($s){
+      global $CONFIG;
+  
+      $data = Commerce::isProducts();
+      $results = array();
+
+      foreach ($data as $item) {
+  
+        $lowercaseS = strtolower($s);
+        $lowercaseTitle = strtolower($item->title);
+
+        if( $item->sku === $s || strpos($lowercaseTitle, $lowercaseS) !== false || $item->id === $s){
+            $results[] = $item;
+        }
+      }
+
+      return $results;
+  
+    }
+    
 
 }
 ?>
