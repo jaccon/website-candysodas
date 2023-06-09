@@ -275,7 +275,7 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
                                         $count = 0;
                                         foreach ($categories as $cat) {
                                             $title = $cat->title;
-                                            $permLink = $siteUrl."/c/".$cat->permLink;
+                                            $permLink = $siteUrl."/c/".$cat->permLink.".html";
                                             $count++;
                                     ?>
                                         <li class="onhover-category-list">
@@ -318,10 +318,6 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
 
                                             <li class="nav-item-custom">
                                                 <a href="<?= $siteUrl; ?>/contato.html"> Contato </a>
-                                            </li>
-
-                                            <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>/cadastro.html"> Cadastro </a>
                                             </li>
 
                                         </ul>

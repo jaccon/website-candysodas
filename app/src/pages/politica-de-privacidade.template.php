@@ -1,12 +1,16 @@
 <?php
 include('../config.inc.php');
 global $CONFIG;
-$pageId="0608f566-cc20-11ed-afa1-0242ac120002";
+$pageId="f858a9e2-06ea-11ee-be56-0242ac120002";
 $metaDescription = Commerce::getCommerceSettings('daa548ea-f152-11ed-a05b-0242ac120003','description');
-$title = CMS::isPage($pageId, "slug");
-$featuredImage = CMS::isPage($pageId, "featuredImage");
+$title = CMS::isPage($pageId, "title");
 $siteUrl = $CONFIG['CONF']['siteUrl'];
-$tel="+55 11 95569-6541";
+$content = CMS::isPage($pageId, "content");
+$slug = CMS::isPage($pageId, "slug");
+$pageBackground = CMS::getImage(CMS::isPage($pageId, "pageBackground"));
+
+$metaId = "650660fe-01d0-11ee-be56-0242ac120002";
+$data= CMS::isComponent($metaId,"images");
 
 // SEO
 $metaIdSeo = "0ff54848-c781-11ed-afa1-0242ac120002";
@@ -26,7 +30,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= $siteDescription; ?>">
     <meta name="keywords" content="<?= $keywords; ?>">
-    <meta name="author" content="<?= $siteAuthor; ?>">
+    <meta name="author" content="<?= $author; ?>">
     <link rel="icon" href="<?= $favicon; ?>" type="image/x-icon">
     <title> 
         <?= $pageTitle; ?>
@@ -57,13 +61,50 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
 
     <?php include('../components/header/header.inc.php'); ?>
     <?php include('../components/mobile/menuStart.inc.php'); ?>
-    <?php include('../components/banners/default.inc.php'); ?>
-    <?php include('../components/banners/secondary.inc.php'); ?>
-    <?php include('../components/home/home.inc.php'); ?>
-    <?php include('../components/newsletter/newsletter.inc.php'); ?>
+
+    <!--  -->
+    <section class="breadscrumb-section pt-0">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadscrumb-contain">
+                        <h2> <?= CMS::isPage($pageId, "title"); ?></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fresh-vegetable-section section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
+                
+                <div class="col-xl-6 col-12">
+                    <div class="fresh-contain p-center-left">
+                        <div>
+                            <div class="review-title">
+                                <h2>
+                                    <?= $description; ?>
+                                </h2>
+                            </div>
+
+                            <div class="delivery-list">
+                                <p class="text-content">
+                                    <?= $content; ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    
     <?php include('../components/footer/footer.inc.php'); ?>
-    <?php include('../components/banner-cookie-consent.inc.php'); ?>
-    <?php include('../components/deal/deal.inc.php'); ?>
 
     <div class="bg-overlay"></div>
 
@@ -85,7 +126,6 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <script src="<?= $siteUrl; ?>/assets/js/wow.min.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
-    <script src="<?= $siteUrl; ?>/assets/js/jquery.cookie.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
 </body>
 

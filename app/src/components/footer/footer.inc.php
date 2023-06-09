@@ -74,7 +74,7 @@ $description = CMS::isComponent($metaId,"description");
                                     $count = 0;
                                     foreach ($categories as $cat) {
                                         $title = $cat->title;
-                                        $permLink = $siteUrl."/c/".$cat->permLink;
+                                        $permLink = $siteUrl."/c/".$cat->permLink.".html";
                                         $count++;
                                 ?>
                                     <li>
@@ -140,6 +140,10 @@ $description = CMS::isComponent($metaId,"description");
                                 <li>
                                     <a href="<?= $siteUrl; ?>/wishlist.html" class="text-content">
                                         Favoritos </a>
+                                </li>
+                                <li>
+                                    <a href="<?= $siteUrl; ?>/politica-de-privacidade.html" class="text-content">
+                                        Política de Privacidade </a>
                                 </li>
                                
                             </ul>
@@ -228,3 +232,5 @@ $description = CMS::isComponent($metaId,"description");
             </div>
         </div>
     </footer>
+
+    <?php include('../components/whatsapp-button.inc.php'); ?>

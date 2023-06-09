@@ -2,7 +2,7 @@
 class Social {
 
   // Share with Whatsapp
-  static public function shareWhatsapp($string,$whatsnumber,$link){
+  static public function shareWhatsapp($whatsnumber,$string,$link){
     return "https://api.whatsapp.com/send?phone=".$whatsnumber."&text=".$string." ".$link;
   }
 

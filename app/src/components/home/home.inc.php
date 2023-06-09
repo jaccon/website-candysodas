@@ -9,14 +9,14 @@ $categories = Commerce::isCategories();
                 <div class="col-xxl-3 col-xl-4 d-none d-xl-block">
                     <div class="p-sticky">
                         <div class="category-menu">
-                            <h3> Categoria </h3>
+                            <h3> Categorias </h3>
                             <ul>
 
                                 <?php 
                                     $count = 0;
                                     foreach ($categories as $cat) {
                                         $title = $cat->title;
-                                        $permLink = $siteUrl."/c/".$cat->permLink;
+                                        $permLink = $siteUrl."/c/".$cat->permLink.".html";
                                         $count++;
                                 ?>
                                     <li>
@@ -36,21 +36,7 @@ $categories = Commerce::isCategories();
                         </div>
 
                         <div class="ratio_156 section-t-space">
-                            <div class="home-contain hover-effect">
-                                <img src="../assets/images/vegetable/banner/8.jpg" class="bg-img blur-up lazyload"
-                                    alt="">
-                                <div class="home-detail p-top-left home-p-medium">
-                                    <div>
-                                        <h6 class="text-yellow home-banner">Seafood</h6>
-                                        <h3 class="text-uppercase fw-normal"><span
-                                                class="theme-color fw-bold">Freshes</span> Products</h3>
-                                        <h3 class="fw-light">every hour</h3>
-                                        <button onclick="location.href = 'shop-left-sidebar.html';"
-                                            class="btn btn-animation btn-md mend-auto">Shop Now <i
-                                                class="fa-solid fa-arrow-right icon"></i></button>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php include('../components/banners/banner-sidebar-01.php'); ?>
                         </div>
 
                         
@@ -59,34 +45,6 @@ $categories = Commerce::isCategories();
 
                 <div class="col-xxl-9 col-xl-8">
                     
-
-                    
-
-                    <div class="title">
-                        <h2> Categorias </h2>
-                        <p> Escolha uma categoria para navegar </p>
-                    </div>
-
-                    <div class="category-slider-2 product-wrapper no-arrow">
-
-                        <?php 
-                            // Category Carrousel
-                            $count = 0;
-                            foreach ($categories as $cat) {
-                                $title = $cat->title;
-                                $permLink = $siteUrl."/c/".$cat->permLink;
-                                $count++;
-                        ?>
-                            <div>
-                                <a href="<?= $permLink; ?>" class="category-box category-dark">
-                                    <div>
-                                        <h5><?= $title; ?></h5>
-                                    </div>
-                                </a>
-                            </div>
-                        <?php } ?>
-
-                    </div>
 
                     <div class="title d-block">
                         <h2> Novidades </h2>
@@ -120,7 +78,7 @@ $categories = Commerce::isCategories();
                                     $tags = $item->tags;
                                     $variationMaster = $item->variationMaster;
                                     $productType = $item->productType;
-                                    $permLink = $siteUrl."/p/".$id;
+                                    $permLink = $siteUrl."/p/".$id.".html";
 
                                     if($count <= $productPorPagina AND $productType != 'variation' AND $item->status == "enabled") {
                             ?>
@@ -250,7 +208,7 @@ $categories = Commerce::isCategories();
                                         $title = Commerce::productSearch($value, 'title');
                                         $featuredImage = Commerce::productSearch($value, 'featuredImage');
                                         $weight = Commerce::productSearch($value, 'weight');
-                                        $permLink = $siteUrl."/p/".$uuid;
+                                        $permLink = $siteUrl."/p/".$uuid.".html";
                                 ?>
                                 <li>
                                     <div class="offer-product">
@@ -288,7 +246,7 @@ $categories = Commerce::isCategories();
                                         $title = Commerce::productSearch($value, 'title');
                                         $featuredImage = Commerce::productSearch($value, 'featuredImage');
                                         $weight = Commerce::productSearch($value, 'weight');
-                                        $permLink = $siteUrl."/p/".$uuid;
+                                        $permLink = $siteUrl."/p/".$uuid.".html";
                                 ?>
                                     <li>
                                         <div class="offer-product">
@@ -324,7 +282,7 @@ $categories = Commerce::isCategories();
                                         $title = Commerce::productSearch($value, 'title');
                                         $featuredImage = Commerce::productSearch($value, 'featuredImage');
                                         $weight = Commerce::productSearch($value, 'weight');
-                                        $permLink = $siteUrl."/p/".$uuid;
+                                        $permLink = $siteUrl."/p/".$uuid.".html";
                                 ?>
                                     <li>
                                         <div class="offer-product">

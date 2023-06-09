@@ -14,6 +14,7 @@ RewriteRule ^sender$ sender.php [L]
 RewriteRule ^payment.html$ pages/commerce-payment.php [L]
 RewriteRule ^post-([0-9]+) pages/post.php?id=$1
 RewriteRule ^p/([0-9a-fA-F-]+)\.html$ pages/product.template.php?id=$1 [L]
+RewriteRule ^c/(.*)\.html$ pages/categories.template.php?id=$1 [L]
 RewriteRule ^cart.html$ pages/cart.template.php
 RewriteRule ^checkout.html$ pages/checkout.template.php [L]
 RewriteRule ^thank-you.html$ pages/thank-you.template.php [L]

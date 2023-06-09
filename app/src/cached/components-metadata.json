@@ -22,7 +22,7 @@
     "phoneString" : "+55 11 3726-1055",
     "phoneNumber" : "+551137261055",
     "address" : "Avenida Brigadeiro Faria Lima, 1616",
-    "whatsapp" : "+55 11 96827 0006",
+    "whatsapp" : "+5511968270006",
     "whatsappNumber" : "+5511968270006",
     "whatsappLink" : "https://wa.me/5511968270006?text=Contato",
     "whatsappMessage" : "Encontrei o contato através do site...",
@@ -185,5 +185,14 @@
       "sku3" : "5141",
       "sku4" : "5142"
     }
+  },
+  {
+    "id" : "87fe7702-06e1-11ee-be56-0242ac120002",
+    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Banner Sidebar 01",
+    "slug" : "",
+    "featuredImage" : "banner-sidebar-01.jpg",
+    "permLink" : "/produtos.html"
   }
 ]
