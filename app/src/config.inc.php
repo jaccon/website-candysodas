@@ -30,7 +30,7 @@ $CONFIG['CONF']['siteDevUrl']="#";
 $CONFIG['CONF']['instagramUrl']="#";
 $CONFIG['CONF']['facebookUrl']="#";
 $CONFIG['CONF']['whatsappUrl']="#";
-$CONFIG['CONF']['contentUrl']="/assets/img";
+$CONFIG['CONF']['contentUrl']="/assets/images";
 $CONFIG['CONF']['productDirUrl']=$CONFIG['CONF']['contentUrl']."/products";
 
 // System Configuration

@@ -1,10 +1,19 @@
 <?php
 global $CONFIG;
 $siteUrl = $CONFIG['CONF']['siteUrl'];
-$facebook="";
-$instagram="";
-$tel="+55 11 2729-7297";
-$email="contato@candysodas.com.br";
+$categories = Commerce::isCategories();
+
+// Social Links
+$metaId = "b9c29334-d1c8-11ed-afa1-0242ac120002";
+$whatsapp= CMS::isComponent($metaId,"whatsappLink");
+$instagram= CMS::isComponent($metaId,"instagram");
+$facebook= CMS::isComponent($metaId,"facebook");
+$phone = CMS::isComponent($metaId,"phoneString");
+$email = CMS::isComponent($metaId,"email");
+
+// Marquee
+$metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
+
 ?>
 <header class="pb-md-4 pb-0">
         <div class="header-top">
@@ -22,24 +31,31 @@ $email="contato@candysodas.com.br";
                     <div class="col-xxl-6 col-lg-9 d-lg-block d-none">
                         <div class="header-offer">
                             <div class="notification-slider">
-                                <div>
-                                    <div class="timer-notification">
-                                        <h6><strong class="me-1">Welcome to Fastkart!</strong>Wrap new offers/gift
-                                            every signle day on Weekends.<strong class="ms-1">New Coupon Code: Fast024
-                                            </strong>
 
-                                        </h6>
+                                    <div>
+                                        <div class="timer-notification">
+                                            <h6>
+                                               <?= CMS::isComponent($metaIdMarquee,"text1"); ?>
+                                            </h6>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div>
-                                    <div class="timer-notification">
-                                        <h6>Something you love is now on sale!
-                                            <a href="shop-left-sidebar.html" class="text-white">Buy Now
-                                                !</a>
-                                        </h6>
+                                    <div>
+                                        <div class="timer-notification">
+                                            <h6>
+                                               <?= CMS::isComponent($metaIdMarquee,"text2"); ?>
+                                            </h6>
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div>
+                                        <div class="timer-notification">
+                                            <h6>
+                                               <?= CMS::isComponent($metaIdMarquee,"text3"); ?>
+                                            </h6>
+                                        </div>
+                                    </div>
+
                             </div>
                         </div>
                     </div>
@@ -47,9 +63,19 @@ $email="contato@candysodas.com.br";
                     <div class="col-lg-3">
                         <ul class="about-list right-nav-about">
                             <li>
-                                <span class="text-white">
-                                    Redes Sociais
-                                </span>
+                                <a href="<?= $instagram; ?>" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= $facebook; ?>" target="_blank" class="social-icons"> 
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?= $whatsapp; ?>" target="_blank" class="social-icons"> 
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -69,7 +95,7 @@ $email="contato@candysodas.com.br";
                                 </span>
                             </button>
                             <a href="index.html" class="web-logo nav-logo">
-                                <img src="<?= $siteUrl; ?>/assets/images/logotipo.jpg" class="img-fluid blur-up lazyload" alt="">
+                                <img src="<?= $siteUrl; ?>/assets/images/logotipo.png" class="img-fluid blur-up lazyload" alt="">
                             </a>
 
                             <div class="middle-box">
@@ -115,7 +141,7 @@ $email="contato@candysodas.com.br";
                                             </div>
                                             <div class="delivery-detail">
                                                 <h6>Atendimento</h6>
-                                                <h5><?= $tel; ?></h5>
+                                                <h5><?= $phone; ?></h5>
                                             </div>
                                         </a>
                                     </li>
@@ -232,7 +258,7 @@ $email="contato@candysodas.com.br";
                         <div class="header-nav-left">
                             <button class="dropdown-category">
                                 <i data-feather="align-left"></i>
-                                <span>Todas Categorias</span>
+                                <span> Categorias</span>
                             </button>
 
                             <div class="category-dropdown">
@@ -245,30 +271,22 @@ $email="contato@candysodas.com.br";
 
                                 <ul class="category-list">
 
-                                    <li class="onhover-category-list">
-                                        <a href="javascript:void(0)" class="category-name">
-                                            <h6> Chocolates </h6>
-                                        </a>
-                                    </li>
+                                    <?php 
+                                        $count = 0;
+                                        foreach ($categories as $cat) {
+                                            $title = $cat->title;
+                                            $permLink = $siteUrl."/c/".$cat->permLink;
+                                            $count++;
+                                    ?>
+                                        <li class="onhover-category-list">
+                                            <a href="<?= $permLink; ?>" class="category-name">
+                                                <h6> 
+                                                    <?= $title; ?> 
+                                                </h6>
+                                            </a>
+                                        </li>
+                                    <?php } ?>
 
-                                    <li class="onhover-category-list">
-                                        <a href="javascript:void(0)" class="category-name">
-                                            <h6> Refrigerantes </h6>
-                                        </a>
-                                    </li>
-
-                                    <li class="onhover-category-list">
-                                        <a href="javascript:void(0)" class="category-name">
-                                            <h6> Balas </h6>
-                                        </a>
-                                    </li>
-
-                                    <li class="onhover-category-list">
-                                        <a href="javascript:void(0)" class="category-name">
-                                            <h6> Importados </h6>
-                                        </a>
-                                    </li>
-                                   
                                 </ul>
                             </div>
                         </div>
@@ -288,22 +306,22 @@ $email="contato@candysodas.com.br";
                                                 <a href="<?= $siteUrl; ?>"> Home </a>
                                             </li>
                                             <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>">  Sobre Nós </a>
+                                                <a href="<?= $siteUrl; ?>/sobre.html">  Sobre Nós </a>
                                             </li>
                                             <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>"> Produtos </a>
-                                            </li>
-
-                                            <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>"> Lançamentos </a>
+                                                <a href="<?= $siteUrl; ?>/produtos.html"> Produtos </a>
                                             </li>
 
                                             <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>"> Contato </a>
+                                                <a href="<?= $siteUrl; ?>/lancamentos.html"> Lançamentos </a>
                                             </li>
 
                                             <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>"> Cadastro </a>
+                                                <a href="<?= $siteUrl; ?>/contato.html"> Contato </a>
+                                            </li>
+
+                                            <li class="nav-item-custom">
+                                                <a href="<?= $siteUrl; ?>/cadastro.html"> Cadastro </a>
                                             </li>
 
                                         </ul>

@@ -22378,7 +22378,7 @@ header .offcanvas-backdrop {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     padding: calc(15px + (27 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (27 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (27 - 15) * ((100vw - 320px) / (1920 - 320))) calc(30px + (41 - 30) * ((100vw - 320px) / (1920 - 320)));
     position: relative;
     border-radius: 10px;
@@ -22434,7 +22434,7 @@ header .offcanvas-backdrop {
 }
 
 .contact-box-section .right-sidebar-box .custom-form .custom-input .form-control {
-    padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(41px + (52 - 41) * ((100vw - 320px) / (1920 - 320)));
+    /* padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) calc(41px + (52 - 41) * ((100vw - 320px) / (1920 - 320))); */
     border: none
 }
 
@@ -22473,7 +22473,7 @@ header .offcanvas-backdrop {
 }
 
 .contact-box-section .right-sidebar-box .custom-form .custom-textarea .form-control {
-    padding-left: 52px;
+    /* padding-left: 52px; */
     border: none
 }
 
@@ -29887,4 +29887,10 @@ a.btn.setting-button {
 li.nav-item-custom a {
     color: #000 !important;
     font-weight: 500;
+}
+
+
+/* Custom */
+.social-icons {
+    color: #fff !important;
 }

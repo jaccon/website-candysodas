@@ -101,14 +101,7 @@
       "Instagram" : "https://www.instagram.com/dona_ana_doceesalgados/",
       "Contato" : "/contato.html"
     }
-  },
-  {
-    "id" : "877c9096-0300-11ee-be56-0242ac120002",
-    "cid" : "877c9096-0300-11ee-be56-0242ac120002",
-    "title" : "Component Clientes",
-    "metadataType" : "componentCustomersLogos",
-    "description" : "Componente para logotipos de clientes",
-    "status" : "enabled"
   }
+  
   
 ]

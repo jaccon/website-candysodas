@@ -2,189 +2,225 @@
 include('../config.inc.php');
 global $CONFIG;
 $pageId="e7675e7a-c5ff-11ed-afa1-0242ac120002";
-$metaId="b9c29334-d1c8-11ed-afa1-0242ac120002";
 $metaDescription = Commerce::getCommerceSettings('daa548ea-f152-11ed-a05b-0242ac120003','description');
 $title = CMS::isPage($pageId, "title");
 $siteUrl = $CONFIG['CONF']['siteUrl'];
 $content = CMS::isPage($pageId, "content");
 $slug = CMS::isPage($pageId, "slug");
-$featuredImage = CMS::isPage($pageId, "featuredImage");
 $pageBackground = CMS::getImage(CMS::isPage($pageId, "pageBackground"));
 
-$tel = CMS::isComponent($metaId,"telString");
-$email = CMS::isComponent($metaId,"email");
-$address = CMS::isComponent($metaId,"address");
+// Contact
+$metaId = "b9c29334-d1c8-11ed-afa1-0242ac120002";
+$email= CMS::isComponent($metaId,"email");
+$phoneString= CMS::isComponent($metaId,"phoneString");
+$whatsapp= CMS::isComponent($metaId,"whatsapp");
 
 ?>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <meta name="robots" content="" />    
-    <meta name="description" content="" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-    <title>
-      <?= $title; ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fastkart">
+    <meta name="keywords" content="Fastkart">
+    <meta name="author" content="Fastkart">
+    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <title> 
+        <?= $title; ?>
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- [if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif] -->
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/fontawesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/loader.min.css">    
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,800,800i,900" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round:400,400i&amp;subset=latin-ext" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/bulk-style.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/animate.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/style.css">
 </head>
 
-<body id="bg">
+<body class="bg-effect">
 
-    <div class="page-wraper">  
-      	
-        <?php include('../components/header/header.inc.php'); ?>
 
-        <div class="page-content">
-        
-          <div class="wt-bnr-inr overlay-wraper bg-parallax bg-top-center"  
-                data-stellar-background-ratio="0.5"  
-                style="background-image:url(<?= $pageBackground; ?>);" >
-                <div class="overlay-main bg-black opacity-07"></div>
-                  <div class="container">
-                      <div class="wt-bnr-inr-entry">
-                        <div class="banner-title-outer">
-                            <div class="banner-title-name">
-                              <h2 class="text-white text-uppercase letter-spacing-5 font-18 font-weight-300"> 
-                                <?= $slug; ?> 
-                              </h2>
-                              </div>
-                          </div>
-                          <div class="p-tb20">
-                              <div>
-                                  <ul class="wt-breadcrumb breadcrumb-style-2">
-                                      <li><a href="javascript:void(0);">Home</a></li>
-                                      <li> <?= $slug; ?> </li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-             
-            <div class="section-full p-tb80">
-                <!-- LOCATION BLOCK-->
-                <div class="container">
-                    <!-- TITLE START -->
-                    <div class="section-head text-left text-black">
-                        <h2 class="text-uppercase font-36"> Canais de contato </h2>
-                        <p> Para entrar em contato preencha o formulário abaixo com suas informações que em breve entraremos em contato </p>
-                        <div class="wt-separator-outer">
-                            <div class="wt-separator bg-black"></div>
-                        </div>
+    <?php include('../components/header/header.inc.php'); ?>
+    <?php include('../components/mobile/menuStart.inc.php'); ?>
+
+    <!--  -->
+    <section class="breadscrumb-section pt-0">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadscrumb-contain">
+                        <h2> <?= CMS::isPage($pageId, "title"); ?></h2>
+                        <nav>
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item active" aria-current="page"><?= CMS::isPage($pageId, "title"); ?></li>
+                            </ol>
+                        </nav>
                     </div>
-                    <!-- TITLE END -->                
-                    <!-- GOOGLE MAP & CONTACT FORM -->
-                    <div class="section-content">
-                        <!-- CONTACT FORM-->
-                        <div class="wt-box">
-                            <form class="contact-form cons-contact-form" method="post" action="http://thememajestic.com/modern/form-handler.php">
-                            	<div class="contact-one p-a40 p-r150">
-                                            <div class="form-group">
-                                                <input name="name" type="text" required class="form-control" placeholder="Nome Completo">
-                                            </div>
-                                       
-                                            <div class="form-group">
-                                                <input name="email" type="text" class="form-control" required placeholder="E-mail">
-                                            </div>
-                                       
-                                            <div class="form-group">
-                                                <textarea name="message" rows="3" class="form-control " required placeholder="Mensagem"></textarea>
-                                            </div>
-                                        
-                                            <button name="submit" type="submit" value="Submit" class="site-button black radius-no text-uppercase">
-                                                    <span class="font-12 letter-spacing-5">Enviar</span>
-                                            </button>
-                                            
-                                            <div class="contact-info bg-black text-white p-a30">
-                                                <div class="wt-icon-box-wraper left p-b30">
-                                                    <div class="icon-sm"><i class="iconmoon-smartphone-1"></i></div>
-                                                    <div class="icon-content text-white ">
-                                                        <h5 class="m-t0 text-uppercase">Telefone</h5>
-                                                        <p>
-                                                          <?= $tel; ?>
-                                                        </p>
-                                                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-box-section">
+        <div class="container-fluid-lg">
+            <div class="row g-lg-5 g-3">
+                <div class="col-lg-6">
+                    <div class="left-sidebar-box">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="contact-title">
+                                    <h3> Entrar em contato </h3>
+                                    <p class="mt-4"> Utilize um de nossos canais de comunicação </p>
+                                </div>
+
+                                <div class="contact-detail">
+                                    <div class="row g-4">
+                                        <div class="col-xxl-12 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box">
+                                                <div class="contact-icon">
+                                                    <span class="fas fa-phone"></span>
                                                 </div>
-                                                
-                                                <div class="wt-icon-box-wraper left p-b30">
-                                                    <div class="icon-sm"><i class="iconmoon-email"></i></div>
-                                                    <div class="icon-content text-white">
-                                                        <h5 class="m-t0  text-uppercase">E-mail</h5>
-                                                        <p>
-                                                          <?= $email; ?>
-                                                        </p>
-                                                    </div>
+                                                <div class="contact-detail-title">
+                                                    <h4> Telefone </h4>
                                                 </div>
-                                                
-                                                <div class="wt-icon-box-wraper left">
-                                                    <div class="icon-sm"><i class="iconmoon-travel"></i></div>
-                                                    <div class="icon-content text-white">
-                                                        <h5 class="m-t0  text-uppercase">Endereço</h5>
-                                                        <p>
-                                                          <?= $address; ?>
-                                                        </p>
-                                                    </div>
+
+                                                <div class="contact-detail-contain">
+                                                    <p><?= $phoneString; ?></p>
                                                 </div>
                                             </div>
                                         </div>
-                            </form>
+
+                                        <div class="col-xxl-12 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box">
+                                                <div class="contact-icon">
+                                                    <span class="fas fa-phone"></span>
+                                                </div>
+                                                <div class="contact-detail-title">
+                                                    <h4> Whatsapp </h4>
+                                                </div>
+
+                                                <div class="contact-detail-contain">
+                                                    <p><?= $whatsapp; ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xxl-12 col-lg-12 col-sm-6">
+                                            <div class="contact-detail-box">
+                                                <div class="contact-icon">
+                                                    <span class="fas fa-envelope"></span>
+                                                </div>
+                                                <div class="contact-detail-title">
+                                                    <h4>E-mail</h4>
+                                                </div>
+                                                <div class="contact-detail-contain">
+                                                    <p><?= $email; ?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-           </div>
-           
-            <div class="section-full">
-                <div class="gmap-outline">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.329968320653!2d-46.59762738502224!3d-23.55658978468532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce594b05d7b257%3A0x44ac6f1f1ea23459!2sR.%20dos%20Capit%C3%A3es%20Mores%2C%20306%20-%20Mooca%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003167-030!5e0!3m2!1sen!2sbr!4v1685899971307!5m2!1sen!2sbr" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="col-lg-6">
+                    <div class="title d-xxl-none d-block">
+                        <h2>Formulário de contato</h2>
+                        <p> Envie sua dúvida que em breve entraremos em contato </p>
+                    </div>
+                    <div class="right-sidebar-box">
+                        <div class="row">
+                            <div class="col-xxl-12 col-lg-12 col-sm-6">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput" class="form-label">Nome Completo</label>
+                                    <div class="custom-input">
+                                        <input type="text" class="form-control" id="exampleFormControlInput"
+                                            placeholder="Entre com nome completo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput2" class="form-label">E-mail</label>
+                                    <div class="custom-input">
+                                        <input type="email" class="form-control" id="exampleFormControlInput2"
+                                            placeholder="Digite seu e-mail...">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlInput3" class="form-label">Telefone</label>
+                                    <div class="custom-input">
+                                        <input type="tel" class="form-control" id="exampleFormControlInput3"
+                                            placeholder="Entre com seu celular / Whatsapp" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
+                                            this.value.slice(0, this.maxLength);">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-md-4 mb-3 custom-form">
+                                    <label for="exampleFormControlTextarea" class="form-label">Mensagem</label>
+                                    <div class="custom-textarea">
+                                        <textarea class="form-control" id="exampleFormControlTextarea"
+                                            placeholder="Descreva sua mensagem aqui..." rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-animation btn-md fw-bold ms-auto">Envair Mensagem</button>
+
+                    </div>
                 </div>
-           </div>           
-            
+            </div>
         </div>
-      
-        <?php include('../components/footer/footer.inc.php'); ?>
+    </section>
+    <!--  -->
     
-		    <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
-        
-    </div>
-    
-<script  src="<?= $siteUrl; ?>/assets/js/jquery-1.12.4.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/bootstrap.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/magnific-popup.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/waypoints.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/counterup.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/waypoints-sticky.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/isotope.pkgd.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/owl.carousel.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/stellar.min.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/scrolla.min.js"></script>
-<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqwdZHU6gzIhPBEB2VNbIydp4coZmNPy0&amp;callback=initMap"  ></script>
-<script  src="<?= $siteUrl; ?>/assets/js/map.script.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/custom.js"></script>
-<script  src="<?= $siteUrl; ?>/assets/js/shortcode.js"></script>
+    <?php include('../components/footer/footer.inc.php'); ?>
+
+    <div class="bg-overlay"></div>
+
+    <script src="<?= $siteUrl; ?>/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/jquery-ui.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/popper.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/feather/feather.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/feather/feather-icon.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/lazysizes.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/slick.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/slick-animation.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/custom_slick.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/auto-height.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/timer1.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/fly-cart.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/quantity-2.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/wow.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
 </body>
 
 </html>

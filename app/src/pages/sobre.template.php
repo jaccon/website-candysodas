@@ -14,132 +14,122 @@ $data= CMS::isComponent($metaId,"images");
 
 ?>
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <meta name="robots" content="" />    
-    <meta name="description" content="" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-    <title> <?= $pageTitle." - ".$defaultTitle; ?> </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- [if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif] -->
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/fontawesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/loader.min.css">    
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,800,800i,900" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round:400,400i&amp;subset=latin-ext" rel="stylesheet"> 
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fastkart">
+    <meta name="keywords" content="Fastkart">
+    <meta name="author" content="Fastkart">
+    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <title> 
+        <?= $title; ?>
+    </title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link id="rtl-link" rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/bootstrap.css">
+    <link rel="stylesheet" href="<?= $siteUrl; ?>/assets/css/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/bulk-style.css">
+    <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/animate.css">
+    <link id="color-link" rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/style.css">
 </head>
 
-<body>
+<body class="bg-effect">
 
-	<div class="page-wraper"> 
-       	
-        <?php include('../components/header/header.inc.php'); ?>
-        
-        <div class="page-content">
-        
-            <div class="wt-bnr-inr overlay-wraper bg-parallax bg-top-center"  
-              data-stellar-background-ratio="0.5"  
-              style="background-image:url(<?= $pageBackground; ?>);" >
-            	<div class="overlay-main bg-black opacity-07"></div>
-                <div class="container">
-                    <div class="wt-bnr-inr-entry">
-                    	<div class="banner-title-outer">
-                        	<div class="banner-title-name">
-                        		<h2 class="text-white text-uppercase letter-spacing-5 font-18 font-weight-300"> 
-                              <?= $slug; ?> 
-                            </h2>
+
+    <?php include('../components/header/header.inc.php'); ?>
+    <?php include('../components/mobile/menuStart.inc.php'); ?>
+
+    <!--  -->
+    <section class="fresh-vegetable-section section-lg-space">
+        <div class="container-fluid-lg">
+            <div class="row gx-xl-5 gy-xl-0 g-3 ratio_148_1">
+                
+                <div class="col-xl-6 col-12">
+                    <div class="fresh-contain p-center-left">
+                        <div>
+                            <div class="review-title">
+                                <h4>
+                                    <?= CMS::isPage($pageId, "title"); ?>
+                                </h4>
+                                <h2>
+                                    <?= $description; ?>
+                                </h2>
                             </div>
-                        </div>
-                        <div class="p-tb20">
-                            <div>
-                                <ul class="wt-breadcrumb breadcrumb-style-2">
-                                    <li><a href="javascript:void(0);">Home</a></li>
-                                    <li> <?= $slug; ?> </li>
-                                </ul>
+
+                            <div class="delivery-list">
+                                <p class="text-content">
+                                    <?= $content; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-             
-            <div class="section-full p-tb90 bg-gray square_shape2">
-                <div class="container">
-                    <div class="section-content ">
-                    	<div class="row">
-                        	<div class="col-md-5 col-sm-6">
-                            	<div class="m-about m-l50 m-r50">
-                            		<div class="owl-carousel about-us-carousel owl-btn-bottom-right">
 
-                                        <?php 
-                                          foreach ($data as $key => $value) {
-                                              $count++;
-                                              $featuredImage = CMS::getImage($value);
-                                        ?>
-                                          <div class="item">
-                                              <div class="ow-img wt-img-effect zoom-slow">
-                                                  <a href="javascript:void(0);"><img src="<?= $featuredImage; ?>" alt=""></a>
-                                              </div>
-                                          </div>
-                                        <?php } ?>
-                                   </div>
-                               </div>
+                <div class="col-xl-6 col-12">
+                    <div class="row g-sm-4 g-2">
+                        <div class="col-6">
+                            <div class="fresh-image-2">
+                                <div>
+                                    <img src="../assets/images/inner-page/about-us/1.jpg"
+                                        class="bg-img blur-up lazyload" alt="">
+                                </div>
                             </div>
-                              <div class="col-md-6 col-sm-6">
-                                    <div class="m-about-containt text-black p-t30">
-                                          <span class="font-30 font-weight-300"> <?= $slug; ?> </span>
-                                          <h2 class="font-40"> <?= $description; ?></h2>
-                                          <p class="font-10">
-                                              <?= $content; ?>
-                                          </p>
-                                      </div>
-                                  </div>                            
-                              </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="fresh-image">
+                                <div>
+                                    <img src="../assets/images/inner-page/about-us/2.jpg"
+                                        class="bg-img blur-up lazyload" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    
-                  </div>
-                </div>   
+                </div>
                 
-                <?php include('../components/newsletter/newsletter.inc.php'); ?>
+            </div>
         </div>
-        
-        <?php include('../components/footer/footer.inc.php'); ?>
-        
-		<button class="scroltop">
-            <span class="fa fa-angle-up  relative" id="btn-vibrate"></span>
-        </button>
-        
-    </div>
+    </section>
+    <!--  -->
+    
+    <?php include('../components/footer/footer.inc.php'); ?>
 
-<script  src="<?= $siteUrl; ?>/assets/js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
-<script  src="<?= $siteUrl; ?>/assets/js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script  src="<?= $siteUrl; ?>/assets/js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script  src="<?= $siteUrl; ?>/assets/js/stellar.min.js"></script><!-- PARALLAX BG IMAGE   --> 
-<script  src="<?= $siteUrl; ?>/assets/js/scrolla.min.js"></script><!-- ON SCROLL CONTENT ANIMTE   --> 
-<script  src="<?= $siteUrl; ?>/assets/js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-<script  src="<?= $siteUrl; ?>/assets/js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
+    <div class="bg-overlay"></div>
 
+    <script src="<?= $siteUrl; ?>/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/jquery-ui.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/bootstrap/popper.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/feather/feather.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/feather/feather-icon.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/lazysizes.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/slick.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/slick-animation.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/slick/custom_slick.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/auto-height.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/timer1.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/fly-cart.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/quantity-2.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/wow.min.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
 </body>
 
 </html>

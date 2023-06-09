@@ -17,13 +17,27 @@
     "id" : "b9c29334-d1c8-11ed-afa1-0242ac120002",
     "metadataType" : "componentMeta",
     "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
-    "title" : "Header Top Menu",
-    "email" : "contato@casa8arquitetura.com.br",
-    "telString" : "(11) 2729-7297",
-    "telNumber" : "+551127297297",
-    "address" : "Rua dos Capitães Mores, 306 Mooca <br/> Cep: 03167-030",
-    "whatsapp" : "+5511997297297",
-    "whatsappMessage" : "Encontrei o contato através do site..."
+    "title" : "Contato",
+    "email" : "comercial@candysodas.com",
+    "phoneString" : "+55 11 3726-1055",
+    "phoneNumber" : "+551137261055",
+    "address" : "Avenida Brigadeiro Faria Lima, 1616",
+    "whatsapp" : "+55 11 96827 0006",
+    "whatsappNumber" : "+5511968270006",
+    "whatsappLink" : "https://wa.me/5511968270006?text=Contato",
+    "whatsappMessage" : "Encontrei o contato através do site...",
+    "facebook" : "#",
+    "instagram" : "#",
+    "description" : "A Candy & Sodas Today é uma empresa que atua no seguimento de balas, chicletes, chocolates  e bebidas importadas, trazendo o melhor que o mundo tem para o Brasil."
+  },
+  {
+    "id" : "65ca8ef0-06c3-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
+    "title" : "Marquee",
+    "text1" : "Venha conhecer todas as novidades da CandySodas",
+    "text2" : "As melhores marcas estão na CandySodas, venha conhecer todas nossas novidades",
+    "text3" : "Balas, Refrigerantes, Águas especiais..."
   },
   {
     "id" : "453bbe46-c921-11ed-afa1-0242ac120002",
@@ -148,10 +162,28 @@
   },
   {
     "id" : "309d517e-0301-11ee-be56-0242ac120002",
-    "cId" : "877c9096-0300-11ee-be56-0242ac120002",
+    "cId" : "",
     "metadataType" : "componentMeta",
-    "title" : "Logotipos de Clientes",
-    "slug" : "Vivara",
-    "featuredImage" : "logotipo-clientes-8.jpg"
+    "title" : "Os Mais Procurados",
+    "slug" : "",
+    "description" : "Aqui você encontra a relação dos produtos mais procurados na CandySodas",
+    "bloco01" : {
+      "sku1" : "5109",
+      "sku2" : "5107",
+      "sku3" : "5360",
+      "sku4" : "5004"
+    },
+    "bloco02" : {
+      "sku1" : "5006",
+      "sku2" : "5005",
+      "sku3" : "5007",
+      "sku4" : "5105"
+    },
+    "bloco03" : {
+      "sku1" : "5137",
+      "sku2" : "5252",
+      "sku3" : "5141",
+      "sku4" : "5142"
+    }
   }
 ]

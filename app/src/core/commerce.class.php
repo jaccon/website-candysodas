@@ -271,6 +271,25 @@ class Commerce {
   
     }
 
+    // Product Search
+    static public function productSearch($sku, $field) {
+
+      global $CONFIG;
+      $file = $CONFIG['CONF']['cacheDir']."/products.json";
+
+      if(file_exists($file)){
+        $data =  file_get_contents($file);
+      }
+
+      $objitems = json_decode($data);
+      foreach ($objitems as $content) {
+          if ($content->sku === $sku){
+            return $content->$field;
+          } 
+      }
+      
+    }
+
 
 }
 ?>

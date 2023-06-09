@@ -24,14 +24,14 @@ $siteUrl = $CONFIG['CONF']['siteUrl'];
                     <div class="row g-4">
                         <div class="col-xl-12 col-md-6">
                             <div class="home-contain">
-                                <img src="../assets/images/vegetable/banner/2.jpg" class="bg-img blur-up lazyload"
+                                <img src="<?= $siteUlr; ?>/assets/images/banner-02.jpg" class="bg-img blur-up lazyload"
                                     alt="">
                                 <div class="home-detail p-center-left home-p-sm w-75">
                                     <div>
                                         </h2>
-                                        <h3 class="theme-color">Nut Collection</h3>
+                                        <h3 class="theme-color"> Kit Kat Duo </h3>
                                         <p class="w-75">We deliver organic vegetables & fruits</p>
-                                        <a href="shop-left-sidebar.html" class="shop-button">Shop Now <i
+                                        <a href="shop-left-sidebar.html" class="shop-button"> Ver Detalhes <i
                                                 class="fa-solid fa-right-long"></i></a>
                                     </div>
                                 </div>
@@ -40,14 +40,14 @@ $siteUrl = $CONFIG['CONF']['siteUrl'];
 
                         <div class="col-xl-12 col-md-6">
                             <div class="home-contain">
-                                <img src="../assets/images/vegetable/banner/3.jpg" class="bg-img blur-up lazyload"
+                                <img src="<?= $siteUlr; ?>/assets/images/banner-03.jpg" class="bg-img blur-up lazyload"
                                     alt="">
                                 <div class="home-detail p-center-left home-p-sm w-75">
                                     <div>
-                                        <h3 class="mt-0 theme-color fw-bold">Healthy Food</h3>
-                                        <h4 class="text-danger">Organic Market</h4>
-                                        <p class="organic">Start your daily shopping with some Organic food</p>
-                                        <a href="shop-left-sidebar.html" class="shop-button">Shop Now <i
+                                        <h3 class="mt-0 theme-color fw-bold"> Pringles </h3>
+                                        <h4 class="text-danger"> Sabores especiais </h4>
+                                        <p class="organic"> Os mais variados sabores importados </p>
+                                        <a href="shop-left-sidebar.html" class="shop-button"> Ver Detalhes <i
                                                 class="fa-solid fa-right-long"></i></a>
                                     </div>
                                 </div>

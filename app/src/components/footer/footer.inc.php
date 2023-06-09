@@ -1,3 +1,16 @@
+<?php
+global $CONFIG;
+$siteUrl = $CONFIG['CONF']['siteUrl'];
+// Social Links
+$metaId = "b9c29334-d1c8-11ed-afa1-0242ac120002";
+$whatsapp= CMS::isComponent($metaId,"whatsappLink");
+$instagram= CMS::isComponent($metaId,"instagram");
+$facebook= CMS::isComponent($metaId,"facebook");
+$phone = CMS::isComponent($metaId,"phoneString");
+$email = CMS::isComponent($metaId,"email");
+$description = CMS::isComponent($metaId,"description");
+
+?>
 <footer class="section-t-space">
         <div class="container-fluid-lg">
             <div class="service-section">
@@ -43,19 +56,9 @@
                             </div>
 
                             <div class="footer-logo-contain">
-                                <p>We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a
-                                    perfect place for a couple.</p>
-
-                                <ul class="address">
-                                    <li>
-                                        <i data-feather="home"></i>
-                                        <a href="javascript:void(0)">1418 Riverwood Drive, CA 96052, US</a>
-                                    </li>
-                                    <li>
-                                        <i data-feather="mail"></i>
-                                        <a href="javascript:void(0)">support@fastkart.com</a>
-                                    </li>
-                                </ul>
+                                <p>
+                                    <?= $description; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -67,24 +70,21 @@
 
                         <div class="footer-contain">
                             <ul>
-                                <li>
-                                    <a href="#" class="text-content">Vegetables & Fruit</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-content">Beverages</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-content">Meats & Seafood</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-content">Frozen Foods</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-content">Biscuits & Snacks</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-content">Grocery & Staples</a>
-                                </li>
+                                <?php 
+                                    $count = 0;
+                                    foreach ($categories as $cat) {
+                                        $title = $cat->title;
+                                        $permLink = $siteUrl."/c/".$cat->permLink;
+                                        $count++;
+                                ?>
+                                    <li>
+                                        <a href="<?= $permLink; ?>" class="text-content">
+                                            <?= $title; ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+
+
                             </ul>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                                         <i data-feather="phone"></i>
                                         <div class="contact-number">
                                             <h6 class="text-content">Atendimento :</h6>
-                                            <h5> <?= $tel; ?> </h5>
+                                            <h5> <?= $phone; ?> </h5>
                                         </div>
                                     </div>
                                 </li>
