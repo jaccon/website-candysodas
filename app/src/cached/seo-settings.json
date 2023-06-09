@@ -4,5 +4,17 @@
     "name" : "SEO blacklist",
     "description" : "SEO indexer blacklist",
     "blacklist" : "404.html,cart.html,checkout.html,payment-pix.html,payment-pix.html,thank-you.html,.DS_Store,commerce-payment.html,http://localhost:8918/commerce-payment3.html"
+  },
+  {
+    "id" : "0ff54848-c781-11ed-afa1-0242ac120002",
+    "name" : "Search Engine Optimization Settings",
+    "defaultPageTitle" : "Candy Sodas",
+    "defaultSiteDescription" : "Candy Sodas",
+    "description" : "A Candy & Sodas Today é uma empresa que atua no seguimento de balas, chicletes, chocolates  e bebidas importadas, trazendo o melhor que o mundo tem para o Brasil.",
+    "content" : "Candy Sodas",
+    "keywords" : "Candy Sodas, Balas Açucaradas, Guloseimas importadas, Refrigerantes, Refrigerantes Importados, Balas Importadas",
+    "author" : "Candy Sodas",
+    "robots" : "/robots.txt",
+    "favicon" : "images/favicon.png"
   }
 ]

@@ -29,6 +29,21 @@ class Seo {
     }
   }
 
+  static public function isSeo($id, $field){
+    global $CONFIG;
+    $file = $CONFIG['CONF']['cacheDir']."/seo-settings.json";
+
+    if(file_exists($file)){
+      $data =  file_get_contents($file);
+    }
+
+    $objitems = json_decode($data);
+      foreach ($objitems as $content) {
+          if ($content->id === $id) return $content->$field;
+       }
+      return false;
+  }
+
 }
 
 ?>

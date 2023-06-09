@@ -64,11 +64,6 @@ $whatsapp= CMS::isComponent($metaId,"whatsapp");
                 <div class="col-12">
                     <div class="breadscrumb-contain">
                         <h2> <?= CMS::isPage($pageId, "title"); ?></h2>
-                        <nav>
-                            <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item active" aria-current="page"><?= CMS::isPage($pageId, "title"); ?></li>
-                            </ol>
-                        </nav>
                     </div>
                 </div>
             </div>

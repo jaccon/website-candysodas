@@ -7,6 +7,15 @@ $title = CMS::isPage($pageId, "slug");
 $featuredImage = CMS::isPage($pageId, "featuredImage");
 $siteUrl = $CONFIG['CONF']['siteUrl'];
 $tel="+55 11 95569-6541";
+
+// SEO
+$metaIdSeo = "0ff54848-c781-11ed-afa1-0242ac120002";
+$pageTitle = Seo::isSeo($metaIdSeo, "defaultPageTitle")." - ".$title;
+$siteDescription = Seo::isSeo($metaIdSeo, "description");
+$siteAuthor = Seo::isSeo($metaIdSeo, "author");
+$keywords = Seo::isSeo($metaIdSeo, "keywords");
+$favicon = Seo::isSeo($metaIdSeo, "favicon");
+
 ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -15,12 +24,12 @@ $tel="+55 11 95569-6541";
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fastkart">
-    <meta name="keywords" content="Fastkart">
-    <meta name="author" content="Fastkart">
-    <link rel="icon" href="assets/images/favicon/1.png" type="image/x-icon">
+    <meta name="description" content="<?= $siteDescription; ?>">
+    <meta name="keywords" content="<?= $keywords; ?>">
+    <meta name="author" content="<?= $siteAuthor; ?>">
+    <link rel="icon" href="<?= $favicon; ?>" type="image/x-icon">
     <title> 
-        <?= $title; ?>
+        <?= $pageTitle; ?>
     </title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
