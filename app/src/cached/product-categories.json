@@ -18,5 +18,15 @@
     "permLink" : "balas-acucaradas",
     "contractId": "62cb1ed620972f002157e3eb",
     "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "ee730a7a-0709-11ee-be56-0242ac120002",
+    "title" : "Lançamentos",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "lancamentos",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
   }
 ]

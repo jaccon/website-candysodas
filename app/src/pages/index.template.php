@@ -63,8 +63,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <?php include('../components/newsletter/newsletter.inc.php'); ?>
     <?php include('../components/footer/footer.inc.php'); ?>
     <?php include('../components/banner-cookie-consent.inc.php'); ?>
-    <?php include('../components/deal/deal.inc.php'); ?>
-
+    
     <div class="bg-overlay"></div>
 
     <script src="<?= $siteUrl; ?>/assets/js/jquery-3.6.0.min.js"></script>

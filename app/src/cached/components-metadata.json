@@ -194,5 +194,20 @@
     "slug" : "",
     "featuredImage" : "banner-sidebar-01.jpg",
     "permLink" : "/produtos.html"
+  },
+  {
+    "id" : "d9faf138-070a-11ee-be56-0242ac120002",
+    "cId" : "d9faf138-070a-11ee-be56-0242ac120002",
+    "metadataType" : "componentMeta",
+    "title" : "Recomendamos pra você",
+    "slug" : "Recomendamos estes produtos para você",
+    "featuredImage" : "",
+    "itens" : {
+      "sku1" : "5109",
+      "sku2" : "5107",
+      "sku3" : "5004",
+      "sku4" : "5252",
+      "sku5" : "5516"
+    }
   }
 ]

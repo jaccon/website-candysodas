@@ -257,7 +257,7 @@ $categories = Commerce::isCategories();
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                    <a href="<?= $permLink; ?>" class="text-title">
                                                         <h6 class="name"> <?= $title; ?> </h6>
                                                     </a>
                                                     <span><?= $weight; ?></span>
@@ -293,7 +293,7 @@ $categories = Commerce::isCategories();
 
                                             <div class="offer-detail">
                                                 <div>
-                                                    <a href="product-left-thumbnail.html" class="text-title">
+                                                    <a href="<?= $permLink; ?>" class="text-title">
                                                         <h6 class="name"> <?= $title; ?> </h6>
                                                     </a>
                                                     <span><?= $weight; ?></span>

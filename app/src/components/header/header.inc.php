@@ -336,7 +336,7 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
                                             </li>
 
                                             <li class="nav-item-custom">
-                                                <a href="<?= $siteUrl; ?>/lancamentos.html"> Lançamentos </a>
+                                                <a href="<?= $siteUrl; ?>/c/lancamentos.html"> Lançamentos </a>
                                             </li>
 
                                             <li class="nav-item-custom">
@@ -352,7 +352,7 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
                         <div class="header-nav-right">
                             <button class="btn deal-button" data-bs-toggle="modal" data-bs-target="#deal-box">
                                 <i data-feather="zap"></i>
-                                <span> Negócio do Dia </span>
+                                <span> Recomendamos pra você </span>
                             </button>
                         </div>
                     </div>
