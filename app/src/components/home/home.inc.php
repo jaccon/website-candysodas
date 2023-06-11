@@ -101,12 +101,17 @@ $categories = Commerce::isCategories();
 
                                                     <li data-bs-toggle="tooltip" data-bs-placement="top"
                                                         title="Wishlist">
-                                                        <a href="<?= $permLink; ?>" class="notifi-wishlist">
+
+                                                        <span id="wishlist" onclick="wishlist('<?= $id; ?>')">
                                                             <i data-feather="heart"></i>
-                                                        </a>
+                                                        </span>
+
                                                     </li>
                                                 </ul>
                                             </div>
+
+                                            
+
                                             <div class="product-detail">
                                                 <a href="<?= $permLink; ?>">
                                                     <h6 class="name h-100">
@@ -136,6 +141,8 @@ $categories = Commerce::isCategories();
                                 </div>
                             </div>
                             <?php }} ?>
+
+                            
 
                         </div>
                     </div>
@@ -312,3 +319,31 @@ $categories = Commerce::isCategories();
             </div>
         </div>
     </section>
+
+    <script>
+        // Wishlist
+        function wishlist(id) {
+            var wishlistArray = JSON.parse(getCookie('wishlist') || '[]');
+            wishlistArray.push(id);
+            setCookie('wishlist', JSON.stringify(wishlistArray));
+            console.log(id + ' added to wishlist');
+            alert('Item adicionado aos favoritos')
+        }
+
+        function getCookie(name) {
+            var cookieName = name + "=";
+            var cookieArray = document.cookie.split(';');
+                for (var i = 0; i < cookieArray.length; i++) {
+                    var cookie = cookieArray[i].trim();
+                    if (cookie.indexOf(cookieName) === 0) {
+                    return cookie.substring(cookieName.length, cookie.length);
+                    }
+            }
+            return null;
+        }
+
+        function setCookie(name, value) {
+            var cookie = name + "=" + value + ";path=/";
+            document.cookie = cookie;
+        }
+    </script>
