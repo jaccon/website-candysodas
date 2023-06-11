@@ -149,53 +149,76 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
                         <h2>Formulário de contato</h2>
                         <p> Envie sua dúvida que em breve entraremos em contato </p>
                     </div>
-                    <div class="right-sidebar-box">
-                        <div class="row">
-                            <div class="col-xxl-12 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput" class="form-label">Nome Completo</label>
-                                    <div class="custom-input">
-                                        <input type="text" class="form-control" id="exampleFormControlInput"
-                                            placeholder="Entre com nome completo">
+                    <form id="contact-form-2" method="POST" enctype="multipart/form-data">
+                        <div class="right-sidebar-box">
+                            <div class="row">
+                                <div class="col-xxl-12 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput" class="form-label">Nome Completo</label>
+                                        <div class="custom-input">
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                name="name" 
+                                                id="name" 
+                                                placeholder="Seu Nome"
+                                             >
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput2" class="form-label">E-mail</label>
-                                    <div class="custom-input">
-                                        <input type="email" class="form-control" id="exampleFormControlInput2"
-                                            placeholder="Digite seu e-mail...">
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput2" class="form-label">E-mail</label>
+                                        <div class="custom-input">
+                                            <input 
+                                                type="email" 
+                                                class="form-control" 
+                                                name="email" 
+                                                id="email" 
+                                                placeholder="E-mail"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-xxl-6 col-lg-12 col-sm-6">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlInput3" class="form-label">Telefone</label>
-                                    <div class="custom-input">
-                                        <input type="tel" class="form-control" id="exampleFormControlInput3"
-                                            placeholder="Entre com seu celular / Whatsapp" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value =
-                                            this.value.slice(0, this.maxLength);">
+                                <div class="col-xxl-6 col-lg-12 col-sm-6">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlInput3" class="form-label">Telefone</label>
+                                        <div class="custom-input">
+                                            <input 
+                                                type="number" 
+                                                class="form-control" 
+                                                name="whatsapp" 
+                                                id="whatsapp" 
+                                                placeholder="Whatsapp"
+                                                maxlength="10" 
+                                                oninput="javascript: if (this.value.length > this.maxLength) this.value =
+                                                this.value.slice(0, this.maxLength);"
+                                            >
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="col-12">
-                                <div class="mb-md-4 mb-3 custom-form">
-                                    <label for="exampleFormControlTextarea" class="form-label">Mensagem</label>
-                                    <div class="custom-textarea">
-                                        <textarea class="form-control" id="exampleFormControlTextarea"
-                                            placeholder="Descreva sua mensagem aqui..." rows="6"></textarea>
+                                <div class="col-12">
+                                    <div class="mb-md-4 mb-3 custom-form">
+                                        <label for="exampleFormControlTextarea" class="form-label">Mensagem</label>
+                                        <div class="custom-textarea">
+                                            <textarea 
+                                                class="form-control" 
+                                                name="message" 
+                                                id="message" 
+                                                cols="30" 
+                                                rows="3"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <button class="btn btn-animation btn-md fw-bold ms-auto" id="button-submit">Envair Mensagem</button>
+
                         </div>
-                        
-                        <button class="btn btn-animation btn-md fw-bold ms-auto">Envair Mensagem</button>
-
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -225,6 +248,48 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+
+    <script>
+
+        document.getElementById("button-submit").onclick = function(e) {sendForm(e)};
+        
+        function sendForm(e) {
+            
+            e.preventDefault();
+
+            alert('Para confirmar o envio clique em OK! ');
+        
+            var name = $("#name").val();
+            var email = $('#email').val();
+            var whatsapp = $('#whatsapp').val();
+            var message = $("#message").val();
+
+            var data = [{
+                name : name, 
+                email : email, 
+                whatsapp : whatsapp, 
+                message : message
+            }]
+
+            jQuery.ajax({
+                type: "POST",
+                url: "https://dash-api-v1.pagefai.com/mail/NjJjYjFlZDYyMDk3MmYwMDIxNTdlM2Vi",
+                data: JSON.stringify({ data }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data){
+                    if(data = 1){
+                        $("#contact-form-2").css("display", "none");
+                        $("#contact-form-message").css("display", "block");
+                        alert('Mensagem Enviada com sucesso!')
+                        console.log(data)
+                    }
+                }
+            });
+            return false;
+        }
+        </script>
+
 </body>
 
 </html>

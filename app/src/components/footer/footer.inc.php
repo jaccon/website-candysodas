@@ -235,3 +235,5 @@ $description = CMS::isComponent($metaId,"description");
 
     <?php include('../components/whatsapp-button.inc.php'); ?>
     <?php include('../components/deal/deal.inc.php'); ?>
+
+    

@@ -13,9 +13,13 @@ $data= CMS::isComponent($metaId,"images");
                                     <h2> Assine a nossa newsletter e ganhe...</h2>
                                     <h5> cupons de desconto e as novidades diretamente em seu e-mail </h5>
                                     <div class="input-box">
-                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        <input 
+                                            type="email" 
+                                            class="form-control" 
+                                            id="email"
+                                            name="email"
                                             placeholder="Entre com seu e-mail aqui...">
-                                        <button class="sub-btn  btn-animation">
+                                        <button class="sub-btn  btn-animation" id="button-submit">
                                             <span class="d-sm-block d-none"> Assine </span>
                                             <i class="fa fa-paper-plane"></i>
                                         </button>
@@ -28,3 +32,38 @@ $data= CMS::isComponent($metaId,"images");
             </div>
         </div>
     </section>
+
+
+    <script>
+
+        document.getElementById("button-submit").onclick = function(e) {sendForm(e)};
+
+        function sendForm(e) {
+            
+            e.preventDefault();
+
+            alert('Adicionamos o seu email em nossa base de dados!');
+
+            var email = $('#email').val();
+
+            var data = [{
+                email : email, 
+            }]
+
+            jQuery.ajax({
+                type: "POST",
+                url: "https://dash-api-v1.pagefai.com/newsletter/signup/NjJjYjFlZDYyMDk3MmYwMDIxNTdlM2Vi",
+                data: JSON.stringify({ data }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data){
+                    if(data = 1){
+                        $("#contact-form-2").css("display", "none");
+                        $("#contact-form-message").css("display", "block");
+                        console.log(data)
+                    }
+                }
+            });
+            return false;
+        }
+</script>

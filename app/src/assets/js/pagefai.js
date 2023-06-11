@@ -71,3 +71,29 @@ $(document).ready(function() {
 });
 
 
+window.addEventListener('DOMContentLoaded', function() {
+  var overlay = document.querySelector('.overlay');
+
+  function closeModal() {
+    overlay.style.display = 'none';
+  }
+
+  overlay.addEventListener('click', closeModal);
+
+  var modal = document.querySelector('.modal');
+  modal.addEventListener('click', function(event) {
+    event.stopPropagation();
+  });
+
+  var form = document.getElementById('subscribe-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    // Handle form submission here (e.g., send data to server)
+    console.log('Name:', name);
+    console.log('Email:', email);
+    closeModal();
+  });
+});
+
