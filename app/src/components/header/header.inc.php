@@ -14,7 +14,29 @@ $email = CMS::isComponent($metaId,"email");
 // Marquee
 $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
 
+if(isset($_COOKIE['wishlist']) && !empty($_COOKIE['wishlist']) && $_COOKIE['wishlist'] !== "[]") {
+    $blink="blinking-text";
+}
+
 ?>
+
+<style>
+.blinking-text {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
 
 <header class="pb-md-4 pb-0">
         <div class="header-top">
@@ -170,7 +192,7 @@ $metaIdMarquee = "65ca8ef0-06c3-11ee-be56-0242ac120002";
                                     </li>
 
                                     <li class="right-side">
-                                        <a href="<?= $siteUrl; ?>/wishlist.html" class="btn p-0 position-relative header-wishlist">
+                                        <a href="<?= $siteUrl; ?>/wishlist.html" class="btn p-0 position-relative header-wishlist <?= $blink; ?>">
                                             <i data-feather="heart"></i>
                                         </a>
                                     </li>

@@ -57,6 +57,14 @@ $categories = Commerce::isCategories();
     <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/bulk-style.css">
     <link rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/vendors/animate.css">
     <link id="color-link" rel="stylesheet" type="text/css" href="<?= $siteUrl; ?>/assets/css/style.css">
+    <style>
+        .wishlist-remove {
+            font-size: 12px;
+            color: #ff0000;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body class="bg-effect">
@@ -139,8 +147,6 @@ $categories = Commerce::isCategories();
                         </div>
                         
                     </div>
-                    <p class="mt-4 mb-4"> Você possui os seguintes produtos em sua lista de favoritos </p>
-
                     <div
                         class="row g-sm-4 g-3 row-cols-xxl-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section list-style">
                         
@@ -148,12 +154,20 @@ $categories = Commerce::isCategories();
                         <?php 
                              $wishlistCookie = $_COOKIE['wishlist'] ?? '';
                              $wishlistArray = json_decode($wishlistCookie, true) ?? [];
+
+                             if(isset($_COOKIE['wishlist']) && !empty($_COOKIE['wishlist']) && $_COOKIE['wishlist'] !== "[]") { 
+                        ?>
+                        
+                            <p class="mt-4 mb-4"> Você possui os seguintes produtos em sua lista de favoritos </p>
+
+                        <?php
                              
                              foreach ($wishlistArray as $itemId) {
                                 $title = Commerce::getProductDetail($itemId, 'title');
                                 $featuredImage = Commerce::normalizeFeatureImage(Commerce::getProductDetail($itemId, 'featuredImage'));
                                 $weight = Commerce::getProductDetail($itemId, "weight");
                                 $id = Commerce::getProductDetail($itemId, "id");
+                                $permLink = $CONFIG['CONF']['siteUrl']."/p/".$id.".html";
                         ?>
                             <div>
                                 <div class="product-box-3 h-100 wow fadeInUp">
@@ -169,12 +183,6 @@ $categories = Commerce::isCategories();
                                                     <a href="<?= $permLink; ?>" alt="<?= $title; ?>">
                                                         <i data-feather="eye"></i>
                                                     </a>
-                                                </li>
-
-                                                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                  <span id="wishlist" onclick="wishlistRemove('<?= $id; ?>')">
-                                                      <i data-feather="heart"></i>
-                                                  </span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -214,11 +222,22 @@ $categories = Commerce::isCategories();
                                             <h6 class="unit">
                                               <?= $weight; ?>
                                             </h6>
+
+                                            <span id="wishlist" 
+                                                onclick="wishlistRemove('<?= $id; ?>')"
+                                                class="wishlist-remove"
+                                            >
+                                               [ x ] Remover dos Favoritos
+                                            </span>
+
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
                         <?php 
+                          } } else {
+                            echo "<p class='row col-md-12'> Você ainda não possui nenhum produto nos favoritos </p>";
                           }
                         ?>
                         <!--  -->
@@ -256,27 +275,22 @@ $categories = Commerce::isCategories();
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
 
     <script>
         function wishlistRemove(id) {
-        // Retrieve the existing wishlist array from the cookie or create an empty array
         var wishlistArray = JSON.parse(getCookie('wishlist') || '[]');
 
-        // Find the index of the ID in the wishlist array
         var index = wishlistArray.indexOf(id);
 
-        // Remove the ID from the wishlist array if found
         if (index > -1) {
           wishlistArray.splice(index, 1);
-
-          // Store the updated wishlist array in the cookie
           setCookie('wishlist', JSON.stringify(wishlistArray));
           location.reload(); 
           console.log(id + ' removed from wishlist');
         }
       }
 
-      // Function to retrieve a cookie value by name
       function getCookie(name) {
         var cookieName = name + "=";
         var cookieArray = document.cookie.split(';');
@@ -289,7 +303,6 @@ $categories = Commerce::isCategories();
         return null;
       }
 
-      // Function to set a cookie value
       function setCookie(name, value) {
         var cookie = name + "=" + value + ";path=/";
         document.cookie = cookie;

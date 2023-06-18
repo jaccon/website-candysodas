@@ -1,0 +1,3 @@
+<?php
+// Pagefai Middleware Communication
+

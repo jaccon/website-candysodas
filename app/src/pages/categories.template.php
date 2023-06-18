@@ -183,9 +183,9 @@ $categories = Commerce::isCategories();
                                                 </li>
 
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                    <a href="<?= $siteUrl; ?>/wishlist.html" class="notifi-wishlist">
+                                                    <span id="wishlist" onclick="wishlist('<?= $id; ?>')">
                                                         <i data-feather="heart"></i>
-                                                    </a>
+                                                    </span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -265,6 +265,7 @@ $categories = Commerce::isCategories();
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
 </body>
 
 </html>

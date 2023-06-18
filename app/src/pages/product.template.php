@@ -173,10 +173,10 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
                                 ?>
 
                                 <div class="buy-box">
-                                    <a href="wishlist.html">
+                                    <span id="wishlist" onclick="wishlist('<?= $productId; ?>')">
                                         <i data-feather="heart"></i>
                                         <span>Adicionar aos Favoritos</span>
-                                    </a>
+                                    </span>
                                 </div>
 
                                 <div class="paymnet-option">
@@ -375,6 +375,8 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
+
 </body>
 
 </html>

@@ -141,14 +141,8 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
                         
                         <!--  -->
                         <p> Pesquisa por: <?= $search; ?> </p>
-
                         <?php 
                                 $data = Commerce::searchProducts($search);
-
-                                // if ($data !== null && !empty($data)) {
-                                //   print_r($data);
-                                // }
-
                                 $count = 0;
                                 foreach ($data as $item) {
                                     $count++;
@@ -186,9 +180,9 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
                                                 </li>
 
                                                 <li data-bs-toggle="tooltip" data-bs-placement="top" title="Wishlist">
-                                                    <a href="<?= $siteUrl; ?>/wishlist.html" class="notifi-wishlist">
+                                                    <span id="wishlist" onclick="wishlist('<?= $id; ?>')">
                                                         <i data-feather="heart"></i>
-                                                    </a>
+                                                    </span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -270,6 +264,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <script src="<?= $siteUrl; ?>/assets/js/custom-wow.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
 </body>
 
 </html>

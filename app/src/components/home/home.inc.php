@@ -319,31 +319,3 @@ $categories = Commerce::isCategories();
             </div>
         </div>
     </section>
-
-    <script>
-        // Wishlist
-        function wishlist(id) {
-            var wishlistArray = JSON.parse(getCookie('wishlist') || '[]');
-            wishlistArray.push(id);
-            setCookie('wishlist', JSON.stringify(wishlistArray));
-            console.log(id + ' added to wishlist');
-            alert('Item adicionado aos favoritos')
-        }
-
-        function getCookie(name) {
-            var cookieName = name + "=";
-            var cookieArray = document.cookie.split(';');
-                for (var i = 0; i < cookieArray.length; i++) {
-                    var cookie = cookieArray[i].trim();
-                    if (cookie.indexOf(cookieName) === 0) {
-                    return cookie.substring(cookieName.length, cookie.length);
-                    }
-            }
-            return null;
-        }
-
-        function setCookie(name, value) {
-            var cookie = name + "=" + value + ";path=/";
-            document.cookie = cookie;
-        }
-    </script>

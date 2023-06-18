@@ -86,6 +86,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
     <script src="<?= $siteUrl; ?>/assets/js/script.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/jquery.cookie.js"></script>
     <script src="<?= $siteUrl; ?>/assets/js/theme-setting.js"></script>
+    <script src="<?= $siteUrl; ?>/assets/js/pagefai.js"></script>
 </body>
 
 </html>

@@ -8667,7 +8667,7 @@ header .top-nav .navbar-top .rightside-box .right-side-menu .right-side .deliver
 }
 
 header .top-nav .navbar-top .rightside-box .right-side-menu .right-side .delivery-login-box .delivery-detail h6 {
-    color: #4a5568;
+    color: #ff0000;
     margin-bottom: 3px
 }
 
@@ -8682,7 +8682,7 @@ header .top-nav .navbar-top .rightside-box .right-side-menu .right-side .header-
 
 header .top-nav .navbar-top .rightside-box .right-side-menu .right-side .header-wishlist .feather {
     stroke-width: 1.5;
-    color: #4a5568
+    color: #ff0000
 }
 
 @media (max-width: 1660px) {
@@ -29896,3 +29896,19 @@ li.nav-item-custom a {
 }
 
 
+/* Wishlist Blink */
+.blinking-text {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      color: red;
+    }
+    50% {
+      color: blue;
+    }
+    100% {
+      color: red;
+    }
+  }
