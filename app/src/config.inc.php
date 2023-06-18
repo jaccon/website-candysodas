@@ -35,7 +35,6 @@ $CONFIG['CONF']['productDirUrl']=$CONFIG['CONF']['contentUrl']."/products";
 
 // System Configuration
 $CONFIG['CONF']['siteDir']="/var/www/html/";
-$CONFIG['CONF']['userId']="#";
 $CONFIG['CONF']['cacheDir']=$CONFIG['CONF']['siteDir']."cached";
 $CONFIG['CONF']['coreDir']=$CONFIG['CONF']['siteDir']."core";
 $CONFIG['CONF']['currency']= "R$ ";
@@ -50,5 +49,6 @@ include($CONFIG['CONF']['coreDir']."/social.class.php");
 include($CONFIG['CONF']['coreDir']."/payments.class.php");
 include($CONFIG['CONF']['coreDir']."/reviews.class.php");
 include($CONFIG['CONF']['coreDir']."/seo.class.php");
+include($CONFIG['CONF']['coreDir']."/newsletter.class.php");
 
 ?>

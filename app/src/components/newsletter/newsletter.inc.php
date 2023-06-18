@@ -9,7 +9,7 @@ $data= CMS::isComponent($metaId,"images");
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xxl-4 col-lg-5 col-md-7 col-sm-9 offset-xxl-2 offset-md-1">
-                                <div class="newsletter-detail">
+                                <div class="newsletter-detail" id="newsletter-container">
                                     <h2> Assine a nossa newsletter e ganhe...</h2>
                                     <h5> cupons de desconto e as novidades diretamente em seu e-mail </h5>
                                     <div class="input-box">
@@ -46,24 +46,34 @@ $data= CMS::isComponent($metaId,"images");
 
             var email = $('#email').val();
 
-            var data = [{
-                email : email, 
-            }]
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            jQuery.ajax({
-                type: "POST",
-                url: "https://dash-api-v1.pagefai.com/newsletter/signup/NjJjYjFlZDYyMDk3MmYwMDIxNTdlM2Vi",
-                data: JSON.stringify({ data }),
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function(data){
-                    if(data = 1){
-                        $("#contact-form-2").css("display", "none");
-                        $("#contact-form-message").css("display", "block");
-                        console.log(data)
+            if (emailPattern.test(email)) {
+                // 
+                var data = [{
+                email : email, 
+                }]
+                jQuery.ajax({
+                    type: "POST",
+                    url: "/midleware?f=newsletter-signup",
+                    data: JSON.stringify({ data }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(data){
+                        if(data == "OK"){
+                            $("#newsletter-container").css("display", "none");
+                            $("#contact-form-message").css("display", "block");
+                        } else {
+                            alert("Erro ao adicionar o email na newsletter");
+                        }
                     }
-                }
-            });
-            return false;
+                });
+                return false;
+                // 
+            } else {
+                alert('Este e-mail não é válido');
+            }
+
+            
         }
 </script>
