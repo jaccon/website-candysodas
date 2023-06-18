@@ -8,30 +8,30 @@
             </li>
 
             <li class="mobile-category">
-                <a href="javascript:void(0)">
-                    <i class="iconly-Category icli js-link"></i>
-                    <span>Category</span>
+                <a href="sobre.html">
+                    <i class="iconly-Category icli "></i>
+                    <span> Sobre </span>
                 </a>
             </li>
 
             <li>
-                <a href="search.html" class="search-box">
+                <a href="produtos.html" class="search-box">
                     <i class="iconly-Search icli"></i>
-                    <span>Search</span>
+                    <span> Produtos </span>
                 </a>
             </li>
 
             <li>
                 <a href="wishlist.html" class="notifi-wishlist">
                     <i class="iconly-Heart icli"></i>
-                    <span>My Wish</span>
+                    <span> Favoritos </span>
                 </a>
             </li>
 
             <li>
-                <a href="cart.html">
+                <a href="contato.html">
                     <i class="iconly-Bag-2 icli fly-cate"></i>
-                    <span>Cart</span>
+                    <span> Contato </span>
                 </a>
             </li>
         </ul>
