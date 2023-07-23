@@ -122,7 +122,7 @@ $description = CMS::isComponent($metaId,"description");
 
                         <div class="footer-contain">
                             <ul>
-                                <li>
+                                <!-- <li>
                                     <a href="<?= $siteUrl; ?>/orders.html" class="text-content">
                                         Seu pedido
                                     </a>
@@ -136,7 +136,7 @@ $description = CMS::isComponent($metaId,"description");
                                     <a href="<?= $siteUrl; ?>/order-tracking.html" class="text-content">
                                         Verificar pedido
                                     </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="<?= $siteUrl; ?>/wishlist.html" class="text-content">
                                         Favoritos </a>

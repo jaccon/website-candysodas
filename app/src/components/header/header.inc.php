@@ -317,6 +317,10 @@ if(isset($_COOKIE['wishlist']) && !empty($_COOKIE['wishlist']) && $_COOKIE['wish
                                 <ul class="category-list">
 
                                     <?php 
+                                        // ordering
+                                        $titles = array_column($categories, 'title');
+                                        array_multisort($titles, SORT_ASC, $categories);
+                                        
                                         $count = 0;
                                         foreach ($categories as $cat) {
                                             $title = $cat->title;

@@ -23,7 +23,7 @@ $CONFIG['CONF']['pixKey']= "26532649864";
 // Site Configuration
 $CONFIG['CONF']['defaultPageTitle']="Candy Sodas";
 $CONFIG['CONF']['siteUrl']="http://localhost:8908";
-// $CONFIG['CONF']['siteUrl']="https://www.casa8arquitetura.com.br";
+// $CONFIG['CONF']['siteUrl']="https://www.candysodas.com.br/";
 $CONFIG['CONF']['assets']=$CONFIG['CONF']['siteUrl']."/assets/";
 $CONFIG['CONF']['sitePrdUrl']="#";
 $CONFIG['CONF']['siteDevUrl']="#";

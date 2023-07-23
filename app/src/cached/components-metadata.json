@@ -209,5 +209,34 @@
       "sku4" : "5252",
       "sku5" : "5516"
     }
+  },
+  {
+    "id" : "7cd2fc6a-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Tabasco Bloody Mary Mix",
+    "featuredImage" : "banner_prod_01.jpg",
+    "permLink" : "#"
+  },
+  {
+    "id" : "b2349616-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Harry PotterChocolate Frogs",
+    "featuredImage" : "banner_prod_04.jpg",
+    "permLink" : "#"
+  },
+  {
+    "id" : "b234994a-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Juicy Fruit",
+    "featuredImage" : "banner_prod_05.jpg",
+    "permLink" : "#"
+  },
+  {
+    "id" : "b2349b20-296c-11ee-be56-0242ac120002",
+    "metadataType" : "componentMetaSecondaryBanner",
+    "title" : "Trident Spearming",
+    "featuredImage" : "banner_prod_06.jpg",
+    "permLink" : "#"
   }
+  
 ]

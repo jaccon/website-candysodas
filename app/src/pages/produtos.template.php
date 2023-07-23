@@ -23,6 +23,8 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
 // Categories
 $categories = Commerce::isCategories();
 
+
+
 ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -102,6 +104,11 @@ $categories = Commerce::isCategories();
 
                                             <ul class="category-list custom-padding custom-height mt-4">
                                                 <?php 
+
+                                                    // ordering
+                                                    $titles = array_column($categories, 'title');
+                                                    array_multisort($titles, SORT_ASC, $categories);
+
                                                     $count = 0;
                                                     foreach ($categories as $cat) {
                                                         $title = $cat->title;

@@ -5024,6 +5024,12 @@ section,.section-t-space {
     color: #4a5568
 }
 
+.text-banner-box {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .text-yellow {
     color: #ffb321 !important
 }
@@ -5253,7 +5259,7 @@ span {
 
 .banner-contain .banner-details .banner-box {
     position: absolute;
-    top: 30px;
+    top: 70px;
     left: 0;
     background-color: rgba(255,255,255,0.5);
     padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(30px + (39 - 30) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));

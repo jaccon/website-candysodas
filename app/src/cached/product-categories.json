@@ -1,7 +1,7 @@
 [
   {
     "id" : "62f77320-05bd-11ee-be56-0242ac120002",
-    "title" : "Geral",
+    "title" : "GERAL",
     "description" : "",
     "featuredImage" : "",
     "status" : "enabled",
@@ -10,8 +10,8 @@
     "userId": "62cb1c8420972f002157e3e9"
   },
   {
-    "id" : "21e1a97c-05c8-11ee-be56-0242ac120002",
-    "title" : "Balas Açucaradas",
+    "id" : "67722a4c-116d-11ee-be56-0242ac120002",
+    "title" : "BALA COM ACUCAR",
     "description" : "",
     "featuredImage" : "",
     "status" : "enabled",
@@ -21,11 +21,71 @@
   },
   {
     "id" : "ee730a7a-0709-11ee-be56-0242ac120002",
-    "title" : "Lançamentos",
+    "title" : "LANÇAMENTOS",
     "description" : "",
     "featuredImage" : "",
     "status" : "enabled",
     "permLink" : "lancamentos",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "67722fba-116d-11ee-be56-0242ac120002",
+    "title" : "CHOCOLATE AO LEITE",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "chocolate-ao-leite",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "67723334-116d-11ee-be56-0242ac120002",
+    "title" : "AGUA MINERAL",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "agua-mineral",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "67723456-116d-11ee-be56-0242ac120002",
+    "title" : "AGUA MINERAL COM GÁS",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "agua-mineral-com-gas",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "677237e4-116d-11ee-be56-0242ac120002",
+    "title" : "SUCO",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "suco",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "6772391a-116d-11ee-be56-0242ac120002",
+    "title" : "CHICLETE SEM ACUCAR",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "chiclete-sem-acucar",
+    "contractId": "62cb1ed620972f002157e3eb",
+    "userId": "62cb1c8420972f002157e3e9"
+  },
+  {
+    "id" : "67723d52-116d-11ee-be56-0242ac120002",
+    "title" : "SNACKS",
+    "description" : "",
+    "featuredImage" : "",
+    "status" : "enabled",
+    "permLink" : "snacks",
     "contractId": "62cb1ed620972f002157e3eb",
     "userId": "62cb1c8420972f002157e3e9"
   }

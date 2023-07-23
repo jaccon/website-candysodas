@@ -45,10 +45,15 @@ class Commerce {
     }
   
     $objitems = json_decode($data);
+    
   
     return $objitems;
     
   }
+
+  
+
+
 
   static public function getCategoryTitle($id) {
 

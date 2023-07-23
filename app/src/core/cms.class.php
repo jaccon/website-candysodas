@@ -60,6 +60,28 @@ class CMS {
     return false;
   }
 
+  static public function getComponentsByMetaType($type) {
+    global $CONFIG;
+    $file = $CONFIG['CONF']['cacheDir'] . "/components-metadata.json";
+
+    if (file_exists($file)) {
+        $data = file_get_contents($file);
+    }
+
+    $objitems = json_decode($data);
+
+    $filteredComponents = array();
+
+    foreach ($objitems as $content) {
+        if ($content->metadataType === $type) {
+            $filteredComponents[] = $content;
+        }
+    }
+
+    return $filteredComponents;
+  }
+
+
   static public function getContractId(){
     global $CONFIG;
 

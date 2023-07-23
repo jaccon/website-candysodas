@@ -8,16 +8,11 @@ $siteUrl = $CONFIG['CONF']['siteUrl'];
 
                 <div class="col-xl-8 ratio_65">
                     <div class="home-contain h-100">
-                        <a href="<?= $siteUlr; ?>/search.html?search=healsi">
+                        <a href="<?= $siteUlr; ?>/search.html?search=monster">
                             <div class="h-100">
                                 <img src="<?= $siteUlr; ?>/assets/images/banner-01.jpg" class="bg-img blur-up lazyload" alt="">
                             </div>
-                            <div class="home-detail p-center-left w-75">
-                                <div>
-                                    <h1 class="text-uppercase text-white"> Tudo para sua saúde diária </h1>
-                                    <p class="w-75 d-none d-sm-block text-white"> Conheça as águas minerais Healsi</p>
-                                </div>
-                            </div>
+                            
                         </a>
                     </div>
                 </div>
@@ -36,7 +31,7 @@ $siteUrl = $CONFIG['CONF']['siteUrl'];
                         </div>
 
                         <div class="col-xl-12 col-md-6">
-                            <a href="<?= $siteUlr; ?>/search.html?search=pringles">
+                            <a href="<?= $siteUlr; ?>/p/3eda71aa-05bc-11ee-be56-0242ac120002.html">
                                 <div class="home-contain">
                                     <img src="<?= $siteUlr; ?>/assets/images/banner-03.jpg" class="bg-img blur-up lazyload"
                                         alt="">
