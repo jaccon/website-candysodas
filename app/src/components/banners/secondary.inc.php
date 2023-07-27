@@ -9,7 +9,7 @@
                     $count = 0;
                     foreach ($banners as $banner) {
                         $title = $banner->title;
-                        $permLink = $siteUrl."/c/".$banner->permLink.".html";
+                        $permLink = $siteUrl.$banner->permLink;
                         $featuredImage = CMS::getImage($banner->featuredImage);
                         $count++;
                 ?>

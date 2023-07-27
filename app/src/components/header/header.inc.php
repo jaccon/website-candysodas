@@ -180,7 +180,7 @@ if(isset($_COOKIE['wishlist']) && !empty($_COOKIE['wishlist']) && $_COOKIE['wish
                                         </div>
                                     </li>
                                     <li class="right-side">
-                                        <a href="contact-us.html" class="delivery-login-box">
+                                        <a href="tel:<?= $phoneNumber; ?>" class="delivery-login-box">
                                             <div class="delivery-icon">
                                                 <i data-feather="phone-call"></i>
                                             </div>

@@ -14,10 +14,15 @@ $categories = Commerce::isCategories();
 
                                 <?php 
                                     $count = 0;
+
+                                    $titles = array_column($categories, 'title');
+                                    array_multisort($titles, SORT_ASC, $categories);
+
                                     foreach ($categories as $cat) {
                                         $title = $cat->title;
                                         $permLink = $siteUrl."/c/".$cat->permLink.".html";
                                         $count++;
+
                                 ?>
                                     <li>
                                         <div class="category-list">

@@ -72,6 +72,8 @@ $description = CMS::isComponent($metaId,"description");
                             <ul>
                                 <?php 
                                     $count = 0;
+                                    $titles = array_column($categories, 'title');
+                                    array_multisort($titles, SORT_ASC, $categories);
                                     foreach ($categories as $cat) {
                                         $title = $cat->title;
                                         $permLink = $siteUrl."/c/".$cat->permLink.".html";
@@ -181,15 +183,13 @@ $description = CMS::isComponent($metaId,"description");
                                     <h5 class="mb-2 text-content">Baixe nosso aplicativo: </h5>
                                     <ul>
                                         <li class="mb-0">
-                                            <a href="<?= $appAndroid; ?>" target="_blank">
-                                                <img src="<?= $siteUrl; ?>/assets/images/playstore.svg" class="blur-up lazyload"
-                                                    alt="">
+                                            <a href="https://play.google.com/store/apps/details?id=com.candysodas.app" target="_blank">
+                                                Android 
                                             </a>
                                         </li>
                                         <li class="mb-0">
                                             <a href="<?= $appiOS; ?>" target="_blank">
-                                                <img src="<?= $siteUrl; ?>/assets/images/appstore.svg" class="blur-up lazyload"
-                                                    alt="">
+                                                iOS 
                                             </a>
                                         </li>
                                     </ul>

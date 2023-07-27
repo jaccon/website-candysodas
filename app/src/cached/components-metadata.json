@@ -18,9 +18,9 @@
     "metadataType" : "componentMeta",
     "cId" : "8827d2c6-d1c8-11ed-afa1-0242ac120002",
     "title" : "Contato",
-    "email" : "comercial@candysodas.com",
-    "phoneString" : "+55 11 3726-1055",
-    "phoneNumber" : "+551137261055",
+    "email" : "comercial@candysodas.com.br",
+    "phoneString" : "+55 11 3722-5031",
+    "phoneNumber" : "+551137225031",
     "address" : "Avenida Brigadeiro Faria Lima, 1616",
     "whatsapp" : "+5511968270006",
     "whatsappNumber" : "+5511968270006",
@@ -215,14 +215,14 @@
     "metadataType" : "componentMetaSecondaryBanner",
     "title" : "Tabasco Bloody Mary Mix",
     "featuredImage" : "banner_prod_01.jpg",
-    "permLink" : "#"
+    "permLink" : "/p/3eda5a26-05bc-11ee-be56-0242ac120002.html"
   },
   {
     "id" : "b2349616-296c-11ee-be56-0242ac120002",
     "metadataType" : "componentMetaSecondaryBanner",
-    "title" : "Harry PotterChocolate Frogs",
+    "title" : "Jelly Belly HP Bertie Bott'ss Beans Box - Feijao Sabores Sortidos",
     "featuredImage" : "banner_prod_04.jpg",
-    "permLink" : "#"
+    "permLink" : "/p/3eda4afe-05bc-11ee-be56-0242ac120002.html"
   },
   {
     "id" : "b234994a-296c-11ee-be56-0242ac120002",
@@ -236,7 +236,7 @@
     "metadataType" : "componentMetaSecondaryBanner",
     "title" : "Trident Spearming",
     "featuredImage" : "banner_prod_06.jpg",
-    "permLink" : "#"
+    "permLink" : "/p/3eda5c9c-05bc-11ee-be56-0242ac120002.html"
   }
   
 ]

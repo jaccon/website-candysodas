@@ -14,6 +14,7 @@ $metaId = "b9c29334-d1c8-11ed-afa1-0242ac120002";
 $email= CMS::isComponent($metaId,"email");
 $phoneString= CMS::isComponent($metaId,"phoneString");
 $whatsapp= CMS::isComponent($metaId,"whatsapp");
+$whatsappNumber= CMS::isComponent($metaId,"whatsappNumber");
 
 // SEO
 $metaIdSeo = "0ff54848-c781-11ed-afa1-0242ac120002";
@@ -118,7 +119,7 @@ $favicon = Seo::isSeo($metaIdSeo, "favicon");
                                                 </div>
 
                                                 <div class="contact-detail-contain">
-                                                    <p><?= $whatsapp; ?></p>
+                                                    <p><?= $whatsappNumber; ?></p>
                                                 </div>
                                             </div>
                                         </div>

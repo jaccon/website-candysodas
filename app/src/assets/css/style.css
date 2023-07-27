@@ -5260,6 +5260,7 @@ span {
 .banner-contain .banner-details .banner-box {
     position: absolute;
     top: 70px;
+    width: 170px;
     left: 0;
     background-color: rgba(255,255,255,0.5);
     padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(30px + (39 - 30) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
