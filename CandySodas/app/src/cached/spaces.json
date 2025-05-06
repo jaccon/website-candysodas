@@ -1,0 +1,96 @@
+[
+    {
+        "name": "Garagem",
+        "description": "garagem principal",
+        "spaceDeadline": "2025-01-01",
+        "priority": "low",
+        "uuid": "350b004c-b905-11ef-9cd2-0242ac120002",
+        "status": "done",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-13 03:49:08",
+        "updatedAt": "2024-12-29 14:26:37"
+    },
+    {
+        "name": "Banheiro Cozinha",
+        "description": "Banheiro ao lado da cozinha",
+        "spaceDeadline": "2024-12-31",
+        "priority": "high",
+        "uuid": "7e4bd706-bfc5-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-21 18:00:42"
+    },
+    {
+        "name": "Quarto de casal",
+        "description": "quarto de casal",
+        "spaceDeadline": "2024-12-31",
+        "priority": "high",
+        "uuid": "e7f56a12-c08a-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-22 17:33:50"
+    },
+    {
+        "name": "Quarto de Solteiro",
+        "description": "Quarto de solteiro",
+        "spaceDeadline": "2024-12-31",
+        "priority": "high",
+        "uuid": "db7356f6-c08e-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-22 18:02:07"
+    },
+    {
+        "name": "Sala de Estar",
+        "description": "Sala de Estar",
+        "spaceDeadline": "2025-01-31",
+        "priority": "urgent",
+        "uuid": "c40e0e1e-c090-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-22 18:15:47"
+    },
+    {
+        "name": "Escritório",
+        "description": "Escritório",
+        "spaceDeadline": "2024-12-28",
+        "priority": "high",
+        "uuid": "32dafe2a-c095-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-22 18:47:30"
+    },
+    {
+        "name": "Quarto de Solteiro",
+        "description": "quarto de solteiro",
+        "spaceDeadline": "2025-01-30",
+        "priority": "high",
+        "uuid": "6b036116-c22f-11ef-9cd2-0242ac120002",
+        "status": "done",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-24 19:43:58",
+        "updatedAt": "2025-01-12 15:56:53"
+    },
+    {
+        "name": "Garagem 01",
+        "description": "garagem principal",
+        "spaceDeadline": "2025-01-01",
+        "priority": "low",
+        "uuid": "efbb5c8c-c23f-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-24 21:42:13",
+        "updatedAt": "2024-12-29 17:08:31"
+    },
+    {
+        "name": "Churrasqueira 01",
+        "description": "Churrasqueira área externa",
+        "spaceDeadline": "2025-01-01",
+        "priority": "high",
+        "uuid": "3b3a05d0-c7a6-11ef-9cd2-0242ac120002",
+        "status": "working",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "created_at": "2024-12-31 18:37:04",
+        "updatedAt": "2024-12-31 18:37:12"
+    }
+]

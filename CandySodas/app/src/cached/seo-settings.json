@@ -1,0 +1,47 @@
+[
+  {
+    "id" : "aca3671e-fe9b-11ed-be56-0242ac120002",
+    "name" : "SEO blacklist",
+    "description" : "SEO indexer blacklist",
+    "blacklist" : "404.html,cart.html,checkout.html,payment-pix.html,payment-pix.html,thank-you.html,.DS_Store,commerce-payment.html,http://localhost:8918/commerce-payment3.html"
+  },
+  {
+    "id" : "0ff54848-c781-11ed-afa1-0242ac120002",
+    "name" : "Search Engine Optimization Settings",
+    "defaultPageTitle" : "Dealer Shop | Distribuição com solução",
+    "defaultSiteDescription" : "Acalanto",
+    "description" : "Dealer Shop | Distribuição com solução",
+    "content" : "Acalanto, O Instituto Acalanto de Atenção Integral em Educação Infantil e Estimulação Multi profissional é um novo conceito em educação e saúde, que nasceu do sonho de uma psicopedagoga, mãe de uma criança com  transtorno do espectro autista (TEA), e de uma jovem estudante de psicologia, ambas apaixonadas pelos sucessos obtidos com a estimulação multidisciplinar.",
+    "keywords" : "CFTV para empresas, Sistema de monitoramento residencial, Vigilância eletrônica, Soluções de segurança CFTV, Câmeras de segurança IP, Instalação de CFTV, Equipamentos de vigilância, Segurança para condomínios, Câmeras de monitoramento, Tecnologia de videomonitoramento, DVR para sistemas de segurança, Câmeras de segurança com infravermelho, Soluções em segurança eletrônica, Monitoramento remoto por CFTV, Kit de CFTV para residências, CFTV HD para empresas, Soluções de segurança integrada, Segurança perimetral com CFTV, Vídeo de alta definição CFTV, Acessórios para câmeras de segurança, Manutenção de sistemas de CFTV, Câmeras de vigilância para empresas, Instalação de câmeras de segurança, Monitoramento por vídeo ao vivo, Sistema de gravação de vídeo, Controle de acesso por vídeo, Tecnologia de CFTV em rede, Câmeras de segurança sem fio, Sistema de segurança 24 horas, Soluções para videomonitoramento comercial, Sistema de videovigilância com DVR, Videomonitoramento para pequenas empresas, Câmeras de segurança full HD, Monitoramento de segurança via celular, Gravação de vídeo por IP, CFTV com câmeras de alta resolução, Soluções de vigilância para indústrias, Segurança eletrônica corporativa, CFTV com reconhecimento facial, Sistema de videovigilância inteligente, Câmeras de segurança com visão noturna, Videomonitoramento para shoppings, Monitoramento com câmeras dome, Câmeras de segurança resistentes a intempéries, Segurança em grandes áreas com CFTV, Sistema de CFTV sem fio para residências, Monitoramento de segurança para escritórios, Tecnologia de gravação em nuvem, Soluções de segurança para armazéns, Câmeras de segurança externas.",
+    "author" : "Dealer Shop | Distribuição com Solução",
+    "robots" : "/robots.txt",
+    "favicon" : "images/favicon.png",
+    "logo" : "logotipo-acalanto.png",
+    "social_facebook" : "https://www.facebook.com/gbeventos",
+    "social_instagram" : "https://www.instagram.com/eventos.gb/",
+    "social_youtube" : "https://www.youtube.com/user/gbeventos",
+    "social_linkedin" : "https://www.linkedin.com/user/gbeventos",
+    "social_twitter" : "https://www.twitter.com/gbeventos"
+  },
+  {
+    "id" : "7c3b5a16-440d-11ee-be56-0242ac120002",
+    "name" : "BreadcrumbList",
+    "BreadcrumbList" : {
+      "Home" : "/index.html",
+      "Institucional" : "/historico.html",
+      "Estrutura" : "/estrutura.html",
+      "Histórico" : "/historico.html",
+      "Proposta Pedagógica" : "/proposta-pedagogica.html",
+      "Como Chegar" : "/como-chegar.html",
+      "Educação Infantil" : "/educacao-infantil.html",
+      "Estimulação Precoce" : "/estimulacao-precoce.html",
+      "Atendimento em Tempo Integral" : "/atendimento-integral.html",
+      "Acalanto para os pais e familiares em Tempo Integral" : "/acalanto-pais-familiares.html",
+      "Vídeos" : "/videos.html",
+      "Fotos" : "/galeria-de-imagens.html",
+      "Notícias" : "/noticias.html",
+      "Contato" : "/contato.html"
+    }
+  }
+]
+

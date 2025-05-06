@@ -1,0 +1,23 @@
+[
+    {
+        "id": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "title": "Projeto piloto Teste 01 teste",
+        "description": "apenas um teste de descri\u00e7\u00e3o",
+        "featuredImage": null,
+        "customerId": "9b636e3e-bfc1-11ef-9cd2-0242ac120002",
+        "projectDeadline": 1735603200,
+        "permissionUsers": [
+            "0a4682a4-b028-11ef-9cd2-0242ac120002",
+            "1b5721b8-b128-11ef-9cd2-0242ac120002"
+        ],
+        "status": "working",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "totalLaborCost": "400",
+        "totalProjectCost": "2000",
+        "installments": "6",
+        "profit": "20",
+        "createdAt": "2024-12-01 14:16:26",
+        "paymentMethod": "1",
+        "updatedAt": "2024-12-25 14:30:45"
+    }
+]

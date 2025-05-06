@@ -1,0 +1,138 @@
+[
+    {
+        "id": "678336540d989",
+        "comment": "asdad",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 03:26:12",
+        "uploadFiles": [
+            {
+                "fileName": "capital.jpg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-12\/678336540d989.jpg",
+                "originalDirectory": "2025-01-12",
+                "uploadPath": "678336540d989.jpg"
+            }
+        ]
+    },
+    {
+        "id": "678336a08a525",
+        "comment": "asdads",
+        "taskId": null,
+        "projectId": null,
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 03:27:28",
+        "uploadFiles": []
+    },
+    {
+        "id": "6783391b4bb13",
+        "comment": "asdasdsd",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 03:38:03",
+        "uploadFiles": [
+            {
+                "fileName": "capital.jpg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-12\/6783391b4bb13.jpg",
+                "originalDirectory": "2025-01-12",
+                "uploadPath": "6783391b4bb13.jpg"
+            }
+        ]
+    },
+    {
+        "id": "67833e413d27f",
+        "comment": "teste 02",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 04:00:01",
+        "uploadFiles": [
+            {
+                "fileName": "capital.jpg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-12\/67833e413d27f.jpg",
+                "originalDirectory": "2025-01-12",
+                "uploadPath": "67833e413d27f.jpg"
+            },
+            {
+                "fileName": "mail_upscayl_6x_realesrgan-x4plus.png",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-12\/67833e413d27f.png",
+                "originalDirectory": "2025-01-12",
+                "uploadPath": "67833e413d27f.png"
+            }
+        ]
+    },
+    {
+        "id": "678341f016675",
+        "comment": "adasdadsasdasdasd",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 04:15:44",
+        "uploadFiles": []
+    },
+    {
+        "id": "678347bf23e70",
+        "comment": "mais um teste simples",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 04:40:31",
+        "uploadFiles": []
+    },
+    {
+        "id": "6783498ad7966",
+        "comment": "mais um teste",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 04:48:11",
+        "uploadFiles": [
+            {
+                "fileName": "3d-render-abstract-particle-design-space-nebula-background.jpg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-12\/6783498ad7966.jpg",
+                "originalDirectory": "2025-01-12",
+                "uploadPath": "6783498ad7966.jpg"
+            }
+        ]
+    },
+    {
+        "id": "67834e0e4e6ac",
+        "comment": "mais um teste",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-12 05:07:26",
+        "uploadFiles": []
+    },
+    {
+        "id": "67847ebf31186",
+        "comment": "Estou adicionando um coment\u00e1rio com o usu\u00e1rio do fornecedor como teste",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "0a4682a4-b028-11ef-9cd2-0242ac120002",
+        "createdAt": "2025-01-13 02:47:27",
+        "uploadFiles": [
+            {
+                "fileName": "WhatsApp Image 2024-10-16 at 15.06.48.jpeg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-13\/67847ebf31186.jpeg",
+                "originalDirectory": "2025-01-13",
+                "uploadPath": "67847ebf31186.jpeg"
+            }
+        ]
+    },
+    {
+        "id": "678486cfcba21",
+        "comment": "Adicionando coment\u00e1rio com o perfil do cliente 01",
+        "taskId": "7d276e46-c22f-11ef-9cd2-0242ac120002",
+        "projectId": "ca30c712-afee-11ef-9cd2-0242ac120002",
+        "userId": "9b636e3e-bfc1-11ef-9cd2-0242ac120002",
+        "createdAt": "2025-01-13 03:21:51",
+        "uploadFiles": [
+            {
+                "fileName": "wallpaper.jpg",
+                "directory": "\/var\/www\/html\/core\/apis\/..\/..\/uploads\/2025-01-13\/678486cfcba21.jpg",
+                "originalDirectory": "2025-01-13",
+                "uploadPath": "678486cfcba21.jpg"
+            }
+        ]
+    }
+]

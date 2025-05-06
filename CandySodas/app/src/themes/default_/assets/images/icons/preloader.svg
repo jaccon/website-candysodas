@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8e8e8e;
+      }
+
+      .cls-2 {
+        fill: #fab700;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.8.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 19)  -->
+  <g>
+    <g id="Camada_1">
+      <circle class="cls-2" cx="100" cy="100" r="20">
+        <animate accumulate="none" additive="replace" attributeName="cx" begin="-0.25s" calcMode="spline" dur="1s" fill="remove" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.5;1" repeatCount="indefinite" restart="always" values="71.21320343559643;28.78679656440357;71.21320343559643"/>
+        <animate accumulate="none" additive="replace" attributeName="cy" begin="-0.25s" calcMode="spline" dur="1s" fill="remove" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.5;1" repeatCount="indefinite" restart="always" values="71.21320343559643;28.786796564403577;71.21320343559643"/>
+        <animate accumulate="none" additive="replace" attributeName="r" begin="-0.25s" calcMode="linear" dur="1s" fill="remove" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" restart="always" values="10;2;10;2;10"/>
+      </circle>
+      <circle class="cls-1" cx="100" cy="100" r="20">
+        <animate accumulate="none" additive="replace" attributeName="cx" begin="0s" calcMode="spline" dur="1s" fill="remove" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.5;1" repeatCount="indefinite" restart="always" values="28.786796564403577;71.21320343559643;28.786796564403577"/>
+        <animate accumulate="none" additive="replace" attributeName="cy" begin="0s" calcMode="spline" dur="1s" fill="remove" keySplines="0.3 0 0.7 1;0.3 0 0.7 1" keyTimes="0;0.5;1" repeatCount="indefinite" restart="always" values="71.21320343559643;28.78679656440357;71.21320343559643"/>
+        <animate accumulate="none" additive="replace" attributeName="r" begin="0s" calcMode="linear" dur="1s" fill="remove" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" restart="always" values="10;2;10;2;10"/>
+      </circle>
+    </g>
+  </g>
+</svg>

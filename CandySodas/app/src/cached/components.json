@@ -1,0 +1,21 @@
+[
+    {
+        "id": "01eff586-196b-11a0-a8ed-0000a4091d38",
+        "title": "Home Principal",
+        "componentName": "home-principal",
+        "description": "component principal da home",
+        "status": "enabled",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-02-28 03:42:57",
+        "updatedAt": "2025-03-01 05:04:00"
+    },
+    {
+        "id": "01eff771-a0ec-1a70-8dc6-0000b52b90b0",
+        "title": "SlideshowHome",
+        "componentName": "slideshowhome",
+        "description": "Componente utilizado para slideshow",
+        "status": "enabled",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-03-02 14:21:27"
+    }
+]

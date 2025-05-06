@@ -1,0 +1,30 @@
+[
+    {
+        "id": "xxxxxx",
+        "title": "\ud83c\udf1f Apresentando o Pagefai CMS: Revolucionando a Gest\u00e3o de Conte\u00fado! \ud83d\ude80 teste 01 asdadasd xxxxasd asdasdasdasdads",
+        "description": "aqui vai uma pequena descri\u00e7\u00e3o vamos l\u00e1",
+        "content": "<p>Voc\u00ea est\u00e1 cansado de sistemas de gerenciamento de conte\u00fado complicados e pouco flex\u00edveis? O <strong>Pagefai CMS<\/strong> chegou para mudar isso! \ud83d\udcbb\u2728<\/p><p>O Pagefai CMS \u00e9 a solu\u00e7\u00e3o perfeita para criar e gerenciar websites com <strong>simplicidade<\/strong>, <strong>agilidade<\/strong> e <strong>total personaliza\u00e7\u00e3o<\/strong>. Aqui est\u00e3o algumas raz\u00f5es pelas quais voc\u00ea vai amar o Pagefai:<\/p><p>\u2705 <strong>Arquitetura Simples e Poderosa:<\/strong> Com o Pagefai, criar novas p\u00e1ginas \u00e9 t\u00e3o f\u00e1cil quanto adicionar um arquivo <code>index.template.php<\/code> na pasta <code>\/pages<\/code>. A m\u00e1gica acontece automaticamente!<\/p><p>\u2705 <strong>Total Controle do Conte\u00fado:<\/strong> Cada detalhe do seu site \u00e9 armazenado de forma organizada em arquivos simples, como JSON. Isso facilita edi\u00e7\u00f5es r\u00e1pidas, backups e at\u00e9 integra\u00e7\u00f5es com APIs externas.<\/p><p>\u2705 <strong>Flexibilidade para Desenvolvedores:<\/strong> Precisa de um sistema que acompanhe suas ideias criativas? O Pagefai oferece uma base robusta, mas aberta para customiza\u00e7\u00f5es, seja para pequenas altera\u00e7\u00f5es ou grandes projetos.<\/p><p>\u2705 <strong>Leve e R\u00e1pido:<\/strong> Diferente de CMS pesados, o Pagefai \u00e9 otimizado para rodar com alta performance, mesmo em servidores com recursos limitados.<\/p><p><br><\/p><ul><li><b>asdasd<\/b><\/li><li><b>asdadasdasdad<\/b><\/li><li><b>asd<\/b><\/li><li><b>asd<\/b><\/li><li><b>asd<\/b><\/li><li><b>ad<\/b><\/li><li><b>asd<\/b><\/li><li><b>as<\/b><\/li><li><b>das<\/b><\/li><li><b>d<\/b><\/li><li><b>asdasd<\/b><\/li><\/ul>",
+        "status": "enabled",
+        "categories": "b6e12eb4-d66c-11ef-9cd2-0242ac120002|5eddd26a-d6c8-11ef-9cd2-0242ac120002|f14e7866-d6c8-11ef-9cd2-0242ac120002",
+        "tags": "xxx",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-25 14:26:01",
+        "updatedAt": "2025-03-02 17:04:17",
+        "postSchedule": null,
+        "permLink": "apresentando-o-pagefai-cms-revolucionando-a-gestao-de-conteudo-teste-01-asdadasd-xxxxasd-asdasdasdasdads"
+    },
+    {
+        "id": "de0fdaee-ec1f-11ef-9cd2-0242ac120002",
+        "title": "Teste de publica\u00e7\u00e3o",
+        "description": "Teste de publica\u00e7\u00e3o",
+        "content": "<p><strong>Teste de publica\u00e7\u00e3o<\/strong><\/p><ul><li>aqui vai um teste em produ\u00e7\u00e3o para entender como este editor funciona<\/li><\/ul>",
+        "status": "disabled",
+        "categories": "b6e12eb4-d66c-11ef-9cd2-0242ac120002|f14e7866-d6c8-11ef-9cd2-0242ac120002",
+        "tags": "asdasd",
+        "postSchedule": null,
+        "permLink": "teste-de-publicacao",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-02-16 04:38:47",
+        "updatedAt": "2025-04-01 03:06:56"
+    }
+]

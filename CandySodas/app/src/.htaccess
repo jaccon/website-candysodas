@@ -1,0 +1,51 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# 🚀 Redirecionar automaticamente qualquer arquivo solicitado em /assets/
+RewriteCond %{REQUEST_URI} ^/assets/(.*)$ [NC]
+RewriteRule ^assets/(.*)$ themes/default/assets/$1 [L]
+
+# Redirecionar para index.template.php na raiz
+RewriteCond %{REQUEST_URI} ^/?$ [OR]
+RewriteCond %{REQUEST_URI} ^/index\.html$ [NC]
+RewriteRule ^$ themes/default/pages/index.template.php [L]
+
+# Panels - Redirecionamento de painéis
+RewriteCond %{REQUEST_URI} ^/panel/?$ [OR]
+RewriteCond %{REQUEST_URI} ^/panel/index\.html$ [NC]
+RewriteRule ^panel/?$ panel/pages/index.template.php [L]
+
+RewriteRule ^panel/([a-zA-Z0-9_-]+)\.html$ panel/pages/$1.template.php [L]
+RewriteRule ^panel/login$ panel/login.template.php [L]
+
+# APIs
+RewriteRule ^api/([a-zA-Z0-9_-]+)$ core/apis/$1.api.php [L]
+
+# App - Rotas amigáveis
+RewriteRule ^sender$ sender.php [L]
+RewriteRule ^midleware$ midleware.php [L]
+RewriteRule ^payment.html$ themes/default/pages/commerce-payment.php [L]
+RewriteRule ^post-([0-9]+)$ themes/default/pages/post.php?id=$1 [L]
+RewriteRule ^product-([a-zA-Z0-9\-]+)\.html$ product.html?permLink=$1 [L,QSA]
+RewriteRule ^p/([0-9a-fA-F-]+)\.html$ themes/default/pages/product.template.php?id=$1 [L]
+RewriteRule ^c/(.*)\.html$ themes/default/pages/categories.template.php?id=$1 [L]
+RewriteRule ^search.html$ themes/default/pages/search.template.php [QSA,L]
+RewriteRule ^cart.html$ themes/default/pages/cart.template.php [L]
+RewriteRule ^checkout.html$ themes/default/pages/checkout.template.php [L]
+RewriteRule ^thank-you.html$ themes/default/pages/thank-you.template.php [L]
+RewriteRule ^order-tracking/(.*)$ themes/default/pages/order-tracking.template.php?id=$1 [L]
+RewriteRule ^pay-pix.html$ themes/default/pages/payment-pix.template.php [L]
+RewriteRule ^(.*).html$ themes/default/pages/$1.template.php [L]
+
+
+# Error Handling
+ErrorDocument 404 /404.html
+
+# Sitemap XML
+RewriteRule ^sitemap.xml$ core/sitemaps/sitemap.php [L]
+
+# PHP Configurations
+php_value upload_max_filesize 500M
+php_value post_max_size 500M
+php_value max_input_time 300
+php_value max_execution_time 300

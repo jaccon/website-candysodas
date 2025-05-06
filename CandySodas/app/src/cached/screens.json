@@ -1,0 +1,42 @@
+[
+  {
+      "pageId": "home",
+      "componentId": "component01",
+      "componentType": "custom",
+      "description" : "",
+      "status": "enabled",
+      "position": "01"
+  },
+  {
+      "pageId": "home",
+      "componentId": "component02",
+      "componentType": "custom",
+      "description" : "",
+      "status": "enabled",
+      "position": "02"
+  },
+  {
+      "pageId": "home",
+      "componentId": "component03",
+      "componentType": "custom",
+      "description" : "",
+      "status": "enabled",
+      "position": "03"
+  },
+  {
+      "pageId": "home",
+      "componentId": "component04",
+      "componentType": "custom",
+      "description" : "",
+      "status": "enabled",
+      "position": "04"
+  },
+  {
+      "pageId": "home",
+      "componentId": "component05",
+      "componentType": "custom",
+      "description" : "",
+      "status": "enabled",
+      "position": "05"
+  }
+]

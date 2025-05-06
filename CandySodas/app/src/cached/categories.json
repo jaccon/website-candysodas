@@ -1,0 +1,26 @@
+[
+    {
+        "id": "b6e12eb4-d66c-11ef-9cd2-0242ac120002",
+        "title": "Posts",
+        "description": "Posts",
+        "status": "enabled",
+        "categoryFather": "",
+        "categoryType": "posts",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-01-19 13:53:41",
+        "usergroup": null,
+        "updatedAt": "2025-03-30 15:55:32"
+    },
+    {
+        "id": "e699e77e-0d7e-11f0-9cd2-0242ac120002",
+        "title": "Pages",
+        "description": "Pages",
+        "status": "enabled",
+        "categoryFather": "b6e12eb4-d66c-11ef-9cd2-0242ac120002",
+        "categoryType": "pages",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-03-30 15:52:04",
+        "usergroup": null,
+        "updatedAt": "2025-03-30 15:55:21"
+    }
+]

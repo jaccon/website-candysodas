@@ -1,0 +1,29 @@
+[
+    {
+        "id": "50631012-ed91-11ef-9cd2-0242ac120002",
+        "title": "Home",
+        "description": "default page",
+        "content": "",
+        "status": "enabled",
+        "categories": "b6e12eb4-d66c-11ef-9cd2-0242ac120002",
+        "tags": "home",
+        "postSchedule": null,
+        "permLink": "home",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-02-18 00:43:27"
+    },
+    {
+        "id": "01f00cba-a86d-1240-987c-000092143907",
+        "title": "Teste",
+        "status": "enabled",
+        "permLink": null,
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "createdAt": "2025-03-29 16:27:07",
+        "description": "Aqui vai um teste de exemplo para adicionar imagens",
+        "content": "<figure class=\"image\"><img src=\"\/uploads\/2025-03-30\/6e7b8c16-0d97-11f0-9cd2-0242ac120002.jpg\" alt=\"Imagem inserida por URL\"><\/figure><h2>asdadasd<\/h2><figure class=\"table\"><table><tbody><tr><td>a<\/td><td>a<\/td><td>a<\/td><td>a<\/td><\/tr><tr><td>b<\/td><td>b<\/td><td>b<\/td><td>b<\/td><\/tr><\/tbody><\/table><\/figure><h3>&nbsp;<\/h3><figure class=\"media\"><div data-oembed-url=\"https:\/\/www.youtube.com\/watch?v=cW3uFsyVTYA&amp;t=209s\"><div style=\"position: relative; padding-bottom: 100%; height: 0; padding-bottom: 56.2493%;\"><iframe src=\"https:\/\/www.youtube.com\/embed\/cW3uFsyVTYA?start=209\" style=\"position: absolute; width: 100%; height: 100%; top: 0; left: 0;\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen=\"\"><\/iframe><\/div><\/div><\/figure><p>&nbsp;<\/p><h2>asda<\/h2><h2>asdasdasd<\/h2><ul><li>asdadads<\/li><li>asdads<\/li><li>ads<\/li><li>asd<\/li><li>ad<\/li><\/ul><blockquote><ul><li>asdadadad<\/li><\/ul><\/blockquote><p>asdadadasd<\/p><p>&nbsp;<\/p><figure class=\"image\"><img src=\"https:\/\/images.pexels.com\/photos\/1232766\/pexels-photo-1232766.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=2\" alt=\"Imagem inserida por URL\"><\/figure>",
+        "categories": "e699e77e-0d7e-11f0-9cd2-0242ac120002",
+        "postSchedule": null,
+        "tags": "asdad",
+        "updatedAt": "2025-03-30 18:47:53"
+    }
+]

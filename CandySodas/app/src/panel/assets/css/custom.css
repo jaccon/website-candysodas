@@ -1,0 +1,26 @@
+i.ki-duotone {
+  font-size: 18px !important;
+}
+
+button.delete-button {
+  border: 0 none !important;
+  background: unset !important;
+}
+
+.app-header-primary {
+  background: linear-gradient(125.83deg, rgb(57, 45, 209) 0%, rgb(169, 27, 120) 99.09%) center center !important;
+}
+
+.modal-header {
+  background: #1B84FF !important;
+}
+
+.item-comment {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.comment {
+  font-style: italic;
+  font-size: 15px !important;
+}

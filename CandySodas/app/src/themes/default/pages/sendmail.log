@@ -1,0 +1,36 @@
+[2025-04-15 02:53:57] Campos recebidos: Array
+(
+    [name] => Andre Jaccon
+    [phone] => 11955696541
+    [email] => jaccon@gmail.com
+    [interested_in] => comercial
+    [message] => asdasd
+    [id] => 31dea076-0eb0-11f0-9cd2-0242ac120002
+    [lgpd] => on
+    [timestamp] => 2025-04-15T02:53:57.245Z
+)
+
+[2025-04-15 02:53:57] Mensagem final após substituição: <p>Candy Sodas recebemos sua mensagem</p>
+[2025-04-15 02:53:57] Enviando e-mail principal...
+[2025-04-15 02:53:58] Resposta do servidor: 250 Ok
+[2025-04-15 02:53:58] Enviando cópia para o replyTo...
+[2025-04-15 02:54:00] Resposta do servidor: 250 Ok
+[2025-04-15 02:54:00] E-mail enviado e salvo com sucesso!
+[2025-04-15 02:57:32] Campos recebidos: Array
+(
+    [name] => Andre Jaccon
+    [phone] => 11955696541
+    [email] => jaccon@gmail.com
+    [interested_in] => comercial
+    [message] => teste
+    [id] => 31dea076-0eb0-11f0-9cd2-0242ac120002
+    [lgpd] => on
+    [timestamp] => 2025-04-15T02:57:32.486Z
+)
+
+[2025-04-15 02:57:32] Mensagem final após substituição: <p>Candy Sodas recebemos sua mensagem</p>
+[2025-04-15 02:57:32] Enviando e-mail principal...
+[2025-04-15 02:57:33] Resposta do servidor: 250 Ok
+[2025-04-15 02:57:33] Enviando cópia para o replyTo...
+[2025-04-15 02:57:35] Resposta do servidor: 250 Ok
+[2025-04-15 02:57:35] E-mail enviado e salvo com sucesso!

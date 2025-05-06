@@ -1,0 +1,16 @@
+[
+    {
+        "id": "01f027da-0403-16b0-89a4-00001fc4fd23",
+        "title": "Chicletes",
+        "createdAt": "2025-05-03 04:49:37",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "status": "enabled"
+    },
+    {
+        "id": "01f027da-0405-1790-afdf-000089510436",
+        "title": "Bala",
+        "createdAt": "2025-05-03 04:49:37",
+        "userId": "e641456c-9fe5-11ef-b864-0242ac120002",
+        "status": "enabled"
+    }
+]

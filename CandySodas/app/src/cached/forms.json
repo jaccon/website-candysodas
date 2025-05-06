@@ -1,0 +1,16 @@
+[
+    {
+        "id": "31dea076-0eb0-11f0-9cd2-0242ac120002",
+        "campaign": "Formul\u00e1rio de Contato Candy Sodas",
+        "replyTo": "andre.jaccon@yahoo.com",
+        "status": "enabled",
+        "createdAt": "2025-04-01 04:17:28",
+        "leadsCapture": "enabled",
+        "updatedAt": "2025-04-15 02:57:17",
+        "content": "<p>Ol\u00e1 {{username}}, n\u00f3s recebemos sua mensagem e em breve iremos entrar em contato.<\/p><p>Utilize tamb\u00e9m nossos demais canais de contato<\/p>",
+        "subject": "Contato Website Candy Sodas",
+        "alias": "",
+        "replyToName": "Candy Sodas",
+        "message": "<p>Candy Sodas recebemos sua mensagem<\/p>"
+    }
+]

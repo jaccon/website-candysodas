@@ -1,0 +1,12 @@
+[01-May-2025 22:14:13 UTC] PHP Notice:  Undefined index: contractId in /var/www/html/config.inc.php on line 33
+[01-May-2025 22:14:13 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /var/www/html/core/translates/loadtranslate.inc.php on line 3
+[01-May-2025 22:14:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/config.inc.php:33) in /var/www/html/core/apis/catalog-import.api.php on line 19
+[01-May-2025 22:14:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/config.inc.php:33) in /var/www/html/core/apis/catalog-import.api.php on line 20
+[01-May-2025 22:14:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/config.inc.php:33) in /var/www/html/core/apis/catalog-import.api.php on line 21
+[01-May-2025 22:14:13 UTC] Debug - Paths:
+[01-May-2025 22:14:13 UTC] Base directory: /var/www/data
+[01-May-2025 22:14:13 UTC] Temp directory: /var/www/data/temp
+[01-May-2025 22:14:13 UTC] Catalog path: /var/www/data/catalog.json
+[01-May-2025 22:14:13 UTC] Creating base directory: /var/www/data
+[01-May-2025 22:14:13 UTC] PHP Warning:  mkdir(): Permission denied in /var/www/html/core/apis/catalog-import.api.php on line 34
+[01-May-2025 22:14:13 UTC] Failed to create base directory
