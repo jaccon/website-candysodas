@@ -147,68 +147,68 @@ $baseUrl = $CONFIG['CONF']['siteUrl'];
       <script src="assets/js/custom/utilities/modals/users-search.js"></script>
 
       <script>
-document.getElementById('export-report-products').addEventListener('click', async () => {
-    // Store button reference and original text
-    const button = document.getElementById('export-report-products');
-    const originalText = button.textContent || 'Export Products';
+         document.getElementById('export-report-products').addEventListener('click', async () => {
+            // Store button reference and original text
+            const button = document.getElementById('export-report-products');
+            const originalText = button.textContent || 'Export Products';
 
-    try {
-        // Show loading state
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Exportando...';
-        button.disabled = true;
+            try {
+               // Show loading state
+               button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Exportando...';
+               button.disabled = true;
 
-        // Make API request
-        const response = await fetch('<?= $baseUrl; ?>/api/catalog-export', {
-            method: 'GET',
-            headers: {
-                'Accept': 'text/csv', // Expect CSV response
+               // Make API request
+               const response = await fetch('<?= $baseUrl; ?>/api/catalog-export', {
+                     method: 'GET',
+                     headers: {
+                        'Accept': 'text/csv', // Expect CSV response
+                     }
+               });
+
+               // Check for HTTP errors
+               if (!response.ok) {
+                     throw new Error(`HTTP error! status: ${response.status}`);
+               }
+
+               // Get response text (CSV content)
+               const csvContent = await response.text();
+
+               // Create and download file
+               const blob = new Blob([csvContent], {
+                     type: 'text/csv;charset=utf-8'
+               });
+
+               const url = window.URL.createObjectURL(blob);
+               const link = document.createElement('a');
+               const timestamp = new Date().toISOString().slice(0, 10);
+
+               link.href = url;
+               link.download = `produtos_catalogo_${timestamp}.csv`;
+
+               // Trigger download
+               document.body.appendChild(link);
+               link.click();
+
+               // Cleanup
+               document.body.removeChild(link);
+               window.URL.revokeObjectURL(url);
+
+            } catch (error) {
+               console.error('Export error:', error);
+               // Show error message
+               Swal.fire({
+                     icon: 'error',
+                     title: 'Erro na Exportação',
+                     text: error.message || 'Ocorreu um erro ao exportar os produtos',
+                     confirmButtonText: 'OK'
+               });
+            } finally {
+               // Always reset button state
+               button.innerHTML = originalText;
+               button.disabled = false;
             }
-        });
-
-        // Check for HTTP errors
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        // Get response text (CSV content)
-        const csvContent = await response.text();
-
-        // Create and download file
-        const blob = new Blob(["\ufeff" + csvContent], {
-            type: 'text/csv;charset=utf-8;'
-        });
-
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        const timestamp = new Date().toISOString().slice(0, 10);
-
-        link.href = url;
-        link.download = `produtos_catalogo_${timestamp}.csv`;
-
-        // Trigger download
-        document.body.appendChild(link);
-        link.click();
-
-        // Cleanup
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-
-    } catch (error) {
-        console.error('Export error:', error);
-        // Show error message
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro na Exportação',
-            text: error.message || 'Ocorreu um erro ao exportar os produtos',
-            confirmButtonText: 'OK'
-        });
-    } finally {
-        // Always reset button state
-        button.innerHTML = originalText;
-        button.disabled = false;
-    }
-});
-</script>
+         });
+      </script>
 
 
    </body>

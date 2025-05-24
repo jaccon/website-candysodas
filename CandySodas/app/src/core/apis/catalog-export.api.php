@@ -23,12 +23,23 @@ if (!is_array($dataArray) || empty($dataArray)) {
 }
 
 $output = fopen('php://output', 'w');
+fwrite($output, "\xEF\xBB\xBF"); // Add BOM
 
-// Cabeçalhos do CSV com base nas chaves do primeiro item
-fputcsv($output, array_keys($dataArray[0]));
+// UTF-8 encode the headers
+$headers = array_keys($dataArray[0]);
+$utf8Headers = array_map('utf8_encode', $headers);
+fputcsv($output, $utf8Headers);
 
 foreach ($dataArray as $item) {
-    fputcsv($output, array_values($item));
+    $utf8Values = [];
+    foreach ($item as $value) {
+        if (is_string($value)) {
+            $utf8Values[] = utf8_decode($value);
+        } else {
+            $utf8Values[] = $value; // If not a string, just add the value
+        }
+    }
+    fputcsv($output, $utf8Values);
 }
 
 fclose($output);
