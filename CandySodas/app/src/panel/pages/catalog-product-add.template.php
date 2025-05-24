@@ -53,14 +53,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'productType' => $_POST['productType'],
         'status' => $_POST['status'],
         'userId' => $userId,
-        'createdAt' => date('Y-m-d H:i:s') 
+        'createdAt' => date('Y-m-d H:i:s'),
+        
+        // Custom fields
+        'codProduto' => $_POST['codProduto'],
+        'ncm' => $_POST['ncm'],
+        'qtdisplay' => $_POST['qtdisplay'],
+        'datavalidade' => $_POST['datavalidade'],
+        'scPrecoImpostos' => $_POST['scPrecoImpostos'],
+        'scPrecoUnitario' => $_POST['scPrecoUnitario'],
+        'sccifPrecoImpostos' => $_POST['sccifPrecoImpostos'],
+        'sccifPrecoUnitario' => $_POST['sccifPrecoUnitario'],
+        'sprefri10PrecoImpostos' => $_POST['sprefri10PrecoImpostos'],
+        'sprefri10PrecoUnitario' => $_POST['sprefri10PrecoUnitario'],
+        'rscifPrecoImpostos' => $_POST['rscifPrecoImpostos'],
+        'rscifPrecoUnitario' => $_POST['rscifPrecoUnitario'],
+        'mgcifPrecoImpostos' => $_POST['mgcifPrecoImpostos'],
+        'mgcifPrecoUnitario' => $_POST['mgcifPrecoUnitario'],
+        'spcifPrecoImpostos' => $_POST['spcifPrecoImpostos'],
+        'spcifPrecoUnitario' => $_POST['spcifPrecoUnitario'],
+        'catClassFiscal' => $_POST['catClassFiscal']
     ];
 
-    if (CMS::saveCmsRegister($dataToSave, 'products.json')) {
+    if (CMS::saveCmsRegister($dataToSave, 'catalog.json')) {
         $message = "Registro salvo com sucesso!";
         $success = true;
         $savedUuid = $uuid;
-        header("Location: ?success=true&uuid=" . urlencode($uuid));
+        header("Location: catalog-product-update.html?success=true&id=" . urlencode($uuid));
         exit;
     } else {
         $message = "Erro ao salvar registro!";
@@ -250,7 +269,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                       required
                                                       >
                                                       <?php 
-                                                        $data = CMS::getCategories('posts');
+                                                        $data = Commerce::getProductCategories();
                                                         foreach ($data as $category) { ?>
                                                           <option value="<?= $category['id']; ?>">  <?= $category['title']; ?> </option>
                                                         <?php } ?>
@@ -415,9 +434,254 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                               </div>
                                               <!-- // General Customization -->
 
+                                              <div class="d-flex align-items-center collapsible py-3 toggle mb-0 collapsed" data-bs-toggle="collapse" data-bs-target="#kt_commercial">
+                                                <div class="btn btn-sm btn-icon mw-20px btn-active-color-primary me-5">
+                                                    <i class="ki-duotone ki-minus-square toggle-on text-primary fs-1"><span class="path1"></span><span class="path2"></span></i>                
+                                                    <i class="ki-duotone ki-plus-square toggle-off fs-1"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i> 
+                                                </div>
+                                                <h4 class="text-gray-700 fw-bold cursor-pointer mb-0">                           
+                                                    Informações Comerciais                        
+                                                </h4>
+                                              </div>
+                                              <div id="kt_commercial" class="collapse fs-6 ms-1">
+
+                                                <p class="mb-4 text-blue-600 fw-semibold fs-6 ps-10 mb-6"> 
+                                                  As informações apresentadas nestes campos não são de uso exclusivo do Sistema e não são exibidas para o cliente.
+                                                </p>
+
+                                                <div class="mb-4 text-gray-600 fw-semibold fs-6 ps-10">
+                                                      <div class="mb-10 fv-row">
+                                                        <label class="form-label"> Cod. do Produto </label>
+                                                        <input 
+                                                          type="text" 
+                                                          name="codProduto" 
+                                                          class="form-control mb-2" 
+                                                          placeholder="Cod. do Produto mesmo que o SKU" 
+                                                          id="codProduto"
+                                                        />
+                                                      </div>
+                                                      <div class="mb-10 fv-row">
+                                                        <label class="form-label"> NCM </label>
+                                                        <input 
+                                                          type="text" 
+                                                          name="ncm" 
+                                                          id="ncm"
+                                                          class="form-control mb-2" 
+                                                          placeholder="NCM" 
+                                                        />
+                                                      </div>
+                                                      <div class="mb-10 fv-row">
+                                                        <label class="form-label"> Quantidade para display </label>
+                                                        <input 
+                                                          type="text" 
+                                                          name="qtdisplay" 
+                                                          id="qtdisplay"
+                                                          class="form-control mb-2" 
+                                                          placeholder="Quantidade para display" 
+                                                        />
+                                                      </div>
+                                                      <div class="mb-10 fv-row">
+                                                        <label class="form-label"> Data de validade </label>
+                                                        <input 
+                                                          type="datetime-local" 
+                                                          name="datavalidade" 
+                                                          id="datavalidade" 
+                                                          class="form-control form-control-lg form-control-solid" 
+                                                          placeholder="Select date & time"
+                                                          value=""
+                                                        />
+                                                      </div>
+                                                      
+                                                        <hr/>
+                                                        <h3> SC </h3>
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preço com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="scPrecoImpostos" 
+                                                            id="scPrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="SC / Preço com impostos" 
+                                                          />
+                                                        </div>
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preço Unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="scPrecoUnitario" 
+                                                            id="scPrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="SC / Preço com impostos" 
+                                                          />
+                                                        </div>
+
+                                                        <h3> SC CIF </h3>
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="sccifPrecoImpostos" 
+                                                            id="sccifPrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços com impostos" 
+                                                          />
+                                                        </div>
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="sccifPrecoUnitario" 
+                                                            id="sccifPrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços unitário" 
+                                                          />
+                                                        </div>
+
+                                                        <h3> SP REFRI + 10 </h3>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="sprefri10PrecoImpostos" 
+                                                            id="sprefri10PrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços com impostos"
+                                                          />
+                                                        </div>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="sprefri10PrecoUnitario" 
+                                                            id="sprefri10PrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços unitário" 
+                                                          />
+                                                        </div>
+
+                                                        <h3> RS CIF </h3>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="rscifPrecoImpostos" 
+                                                            id="rscifPrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços com impostos"
+                                                          />
+                                                        </div>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="rscifPrecoUnitario" 
+                                                            id="rscifPrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços unitário" 
+                                                          />
+                                                        </div>
+
+                                                        <h3> MG CIF </h3>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="mgcifPrecoImpostos" 
+                                                            id="mgcifPrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços com impostos"
+                                                          />
+                                                        </div>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="mgcifPrecoUnitario" 
+                                                            id="mgcifPrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços unitário" 
+                                                          />
+                                                        </div>
+
+                                                        <h3> SP CIF </h3>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços com impostos </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="spcifPrecoImpostos" 
+                                                            id="spcifPrecoImpostos"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços com impostos"
+                                                          />
+                                                        </div>
+
+                                                        <div class="mb-10 fv-row">
+                                                          <label class="form-label"> Preços unitário </label>
+                                                          <input 
+                                                            type="text" 
+                                                            name="spcifPrecoUnitario" 
+                                                            id="spcifPrecoUnitario"
+                                                            class="form-control mb-2" 
+                                                            placeholder="Preços unitário" 
+                                                          />
+                                                        </div>
+
+                                                        <div class="mb-10 fv-row">
+                                                        <label class="form-label"> Categoria de Classificação Fiscal </label>
+
+                                                        <select 
+                                                          name="catClassFiscal"
+                                                          id="catClassFiscal"
+                                                          class="form-select mb-2" 
+                                                          >
+
+                                                           <option value=""> Escolha a categoria de classificação fiscal </option>
+                                                           <option value="1"> GOMA DE MASCAR C/AÇÚCAR </option>
+                                                           <option value="2"> BALAS COM AÇÚCAR </option>
+                                                           <option value="3"> PIRULITOS </option>
+                                                           <option value="4"> CHOCOLATE BRANCO  </option>
+                                                           <option value="5"> MIOJO  </option>
+                                                           <option value="6"> CASTANHA DE CAJU </option>
+                                                           <option value="7"> CHOCOLATES </option>
+                                                           <option value="8"> DOCE DE LEITE </option>
+                                                           <option value="9"> PIPOCA </option>
+                                                           <option value="10"> BISCOITOS </option>
+                                                           <option value="11"> BATATA </option>
+                                                           <option value="12"> FRUTAS GLACEADAS </option>
+                                                           <option value="13"> SUCO DE TOMATE COM PIMENTA </option>
+                                                           <option value="14"> SUCO DE FRUTAS </option>
+                                                           <option value="15"> CHÁ </option>
+                                                           <option value="16"> GOMA DE MASCAR S/ AÇÚCAR </option>
+                                                           <option value="17"> BALAS SEM AÇÚCAR </option>
+                                                           <option value="18"> GELATINA </option>
+                                                           <option value="19"> agua  </option>
+                                                           <option value="20"> AGUÁ COM GÁS E REFRIGERANTE </option>
+                                                           <option value="21"> ENERGÉTICOS </option>
+                                                           <option value="22"> GIM </option>
+                                                           <option value="23"> LICOR </option>
+                                                           <option value="24"> BEBIDA ICE </option>
+                                                           <option value="25"> CERVEJA HARRY POTTER </option>
+                                                           <option value="26"> REFRIGERANTE NOVO NCM </option>
+                                                           <option value="27"> BARRAS DE CEREAIS  </option>
+                                                         </select>
+                                                      </div>
+
+
+
+                                                        
+
+
+                                                </div>
+                                              </div>
                                             </div>
-                                            
-                                    </div>
+                                            </div>
                                           </div>
                                       </div>
                                     </div>

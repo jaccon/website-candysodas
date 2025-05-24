@@ -32,27 +32,23 @@
             <ul class="footer-address-list ftr-details">
                 <li>
                   <span><i class="fas fa-envelope"></i></span>
-                  <p>Email <span> <a href="mailto:contato@candysodas.com.br"> comercial@candysodas.com.br</a></span></p>
+                  <p>Email <span> <a href="mailto:contato@balboacandy.com.br"> comercial@balboacandy.com.br</a></span></p>
                 </li>
                 <li>
                   <span><i class="fas fa-phone-alt"></i></span>
                   <p>Telefone <span> <a href="tel:+551137225031">055-11-3722-5031</a></span></p>
                 </li>
-                <li>
+                <!-- <li>
                   <span><i class="fas fa-map-marker-alt"></i></span>
-                  <p>Endereço <span> 123 Business Centre London SW1A 1AA</span></p>
-                </li>
+                  <p> Endereço <span> 123 Business Centre London SW1A 1AA</span></p>
+                </li> -->
             </ul>
           </div>
           <div class="col-lg-2 col-sm-6">
             <h5 class="mb30 mt30"> Institucional </h5>
             <ul class="footer-address-list link-hover">
-                <li><a href="get-quote.html"> Contato </a></li>
-                <li><a href="javascript:void(0)"> Produtos </a></li>
-                <li><a href="javascript:void(0)"> Políticas de Trocas </a></li>
-                <li><a href="javascript:void(0)"> Políticas de Privacidade </a></li>
-                <li><a href="javascript:void(0)"> Temos e Condições </a></li>
-                <li><a href="#"> Apresentação PDF </a></li>
+                <li><a href="contato.html"> Contato </a></li>
+                <li><a href="produtos.html"> Produtos </a></li>
             </ul>
           </div>
       </div>

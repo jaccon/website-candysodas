@@ -3,7 +3,6 @@ include(__DIR__ . '/../../config.inc.php');
 global $CONFIG;
 session_start();
 Auth::loginSession();
-$baseUrl = $CONFIG['CONF']['siteUrl'];
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -60,7 +59,7 @@ $baseUrl = $CONFIG['CONF']['siteUrl'];
                               <div class="d-flex flex-stack flex-wrap gap-4 w-100">
                                  <div class="page-title d-flex flex-column gap-3 me-3">
                                     <h1 class="page-heading d-flex flex-column justify-content-center text-gray-900 fw-bolder fs-2x my-0">
-                                      Catalog Products  
+                                       <?= CAT_01; ?> de catálogo
                                     </h1>
                                     
                                     <ul class="breadcrumb breadcrumb-separatorless fw-semibold">
@@ -73,25 +72,20 @@ $baseUrl = $CONFIG['CONF']['siteUrl'];
                                           <i class="ki-duotone ki-right fs-4 text-gray-700 mx-n1"></i>                    
                                        </li>
                                        <li class="breadcrumb-item text-gray-700 fw-bold lh-1">
-                                          Catalog Products                                         
+                                          Catálogo / <?= CAT_01; ?>                                            
                                        </li>
                                        <li class="breadcrumb-item"> 
                                           <i class="ki-duotone ki-right fs-4 text-gray-700 mx-n1"></i>                    
                                        </li>
                                        <li class="breadcrumb-item text-gray-500">
-                                          Catalogs                 
+                                          <?= TR_LIST; ?>                    
                                        </li>
                                     </ul>
                                  </div>
                                  <div class="d-flex align-items-center gap-3 gap-lg-5">
                                     <div class="m-0">            
-                                       <button id="export-report-products" class="btn btn-flex btn-sm btn-color-gray-700 bg-body fw-bold px-4">                         
-                                          Export Products
-                                       </button>           
-                                    </div>
-                                    <div class="m-0">            
-                                       <a href="catalog-product-add.html" class="btn btn-flex btn-sm btn-color-gray-700 bg-body fw-bold px-4">                         
-                                          Add New Product
+                                       <a href="categories-product-add.html" class="btn btn-flex btn-sm btn-color-gray-700 bg-body fw-bold px-4">                         
+                                          <?= CAT_02; ?>
                                        </a>           
                                     </div>
                                  </div>
@@ -102,7 +96,7 @@ $baseUrl = $CONFIG['CONF']['siteUrl'];
                         <div id="kt_app_content" class="app-content  pb-0 " >
 
                            <div class="row gx-5 gx-xl-10 mb-xl-10">
-                              <?php include('../components/catalog/catalog-list.inc.php'); ?>
+                              <?php include('../components/categories/categories-product-list.inc.php'); ?>
                            </div>
 
                         </div>
@@ -145,71 +139,5 @@ $baseUrl = $CONFIG['CONF']['siteUrl'];
       <script src="assets/js/custom/utilities/modals/create-project/main.js"></script>
       <script src="assets/js/custom/utilities/modals/new-address.js"></script>
       <script src="assets/js/custom/utilities/modals/users-search.js"></script>
-
-      <script>
-document.getElementById('export-report-products').addEventListener('click', async () => {
-    // Store button reference and original text
-    const button = document.getElementById('export-report-products');
-    const originalText = button.textContent || 'Export Products';
-
-    try {
-        // Show loading state
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Exportando...';
-        button.disabled = true;
-
-        // Make API request
-        const response = await fetch('<?= $baseUrl; ?>/api/catalog-export', {
-            method: 'GET',
-            headers: {
-                'Accept': 'text/csv', // Expect CSV response
-            }
-        });
-
-        // Check for HTTP errors
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        // Get response text (CSV content)
-        const csvContent = await response.text();
-
-        // Create and download file
-        const blob = new Blob(["\ufeff" + csvContent], {
-            type: 'text/csv;charset=utf-8;'
-        });
-
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        const timestamp = new Date().toISOString().slice(0, 10);
-
-        link.href = url;
-        link.download = `produtos_catalogo_${timestamp}.csv`;
-
-        // Trigger download
-        document.body.appendChild(link);
-        link.click();
-
-        // Cleanup
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-
-    } catch (error) {
-        console.error('Export error:', error);
-        // Show error message
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro na Exportação',
-            text: error.message || 'Ocorreu um erro ao exportar os produtos',
-            confirmButtonText: 'OK'
-        });
-    } finally {
-        // Always reset button state
-        button.innerHTML = originalText;
-        button.disabled = false;
-    }
-});
-</script>
-
-
    </body>
 </html>

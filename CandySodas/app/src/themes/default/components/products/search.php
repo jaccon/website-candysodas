@@ -89,7 +89,7 @@ $productsData = getSearchProducts($page, 9, $searchQuery);
                         <div class="s-block">
                             <div class="">
                                 <a href="product-<?= htmlspecialchars($product['permLink']) ?>.html">
-                                    <img src="<?= $baseUrl; ?>/assets/images/products/<?= htmlspecialchars($product['featuredImage']) ?>"
+                                    <img src="<?= $baseUrl; ?>/uploads/products/<?= htmlspecialchars($product['featuredImage']) ?>"
                                         alt="<?= htmlspecialchars($product['title']) ?>"
                                         onerror="this.onerror=null;this.src='<?= $baseUrl; ?>/assets/images/no-image.jpg';"
                                         class="img-fluid">

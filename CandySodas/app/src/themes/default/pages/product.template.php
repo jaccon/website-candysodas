@@ -1,17 +1,40 @@
-<?php 
+<?php
 include('../../../config.inc.php');
 $baseUrl = $CONFIG['CONF']['siteUrl'];
 $permLink = $_REQUEST['permLink'];
 $id = Commerce::getProductIdfromPermLink($permLink);
+$pageTitle = Commerce::getProductDetail($id,'title');
+$title = Cms::getSiteConfigurationData('defaultPageTitle')." | ".$pageTitle;
+$autor = Cms::getSiteConfigurationData('author');
+$description = Commerce::getProductDetail($id,'content');
+$keywords = Cms::getSiteConfigurationData('keywords');
+$image = $CONFIG['CONF']['uploadUrl']."/products/".Commerce::getProductDetail($id,'featuredImage');
+$favicon = Cms::getSiteConfigurationData('favicon');
+$published = date('Y-m-d');
+$siteUrl = $CONFIG['CONF']['siteUrl'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8"/>
-    <title> Balboa Comércio Serviços &amp; Importação e Exportação Ltda - <?= $pageTitle; ?></title>
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
-    <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="rajesh-doot">
+    <?php 
+         Seo::seoRenderAttributes([
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords,
+            'image' => $image,
+            'published' => $published,
+            'author' => $autor,
+            'type' => 'Article',
+            'breadcrumbs' => [
+               ['name' => 'Home', 'url' => $siteUrl],
+               ['name' => 'Contato', 'url' => $siteUrl.'/contato.html'],
+               ['name' => 'Produtos', 'url' => $siteUrl.'/produtos.html']
+            ],
+            'index' => true
+            ]);
+    ?>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="images/favicon.png" rel="icon">
@@ -62,8 +85,11 @@ $id = Commerce::getProductIdfromPermLink($permLink);
 					<div class="col-lg-8">
 						
 						<div class="rpb-shop-prevw">
+							<?php
+								$featuredImage = $CONFIG['CONF']['uploadUrl']."/products/".Commerce::getProductDetail($id,'featuredImage');
+							?>
 							<img 
-                src="<?= Commerce::getProductDetail($id,'featuredImage'); ?>" 
+                src="<?= $featuredImage; ?>" 
                 class="w-100" 
                 alt="img"
                 onerror="this.onerror=null;this.src='<?= $baseUrl; ?>/assets/images/no-image.jpg';"

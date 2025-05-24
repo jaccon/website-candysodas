@@ -68,9 +68,25 @@ class Commerce {
     
   }
 
-  
+   static public function getProductCategories($categoryType = null) {
+    global $CONFIG;
+    $filePath = $CONFIG['CONF']['cacheDir'].'/catalog-categories.json';
 
+    if (file_exists($filePath)) {
+        $jsonData = file_get_contents($filePath);
+        $categories = json_decode($jsonData, true);
+        
+        if (is_array($categories)) {
+            return array_filter($categories, function($category) use ($categoryType) {
+                $isEnabled = isset($category['status']) && $category['status'] === 'enabled';
+                // $matchesType = $categoryType ? (isset($category['categoryType']) && $category['categoryType'] === $categoryType) : true;
+                return $isEnabled;
+            });
+        }
+    }
 
+    return [];
+  }
 
   static public function getCategoryTitle($id) {
 
@@ -93,6 +109,66 @@ class Commerce {
 
 
   }
+
+    static public function getProductCategoryById($registerId) {
+    global $CONFIG;
+
+    $filePath = $CONFIG['CONF']['cacheDir'] . '/catalog-categories.json';
+
+    if (!file_exists($filePath)) {
+        return null; 
+    }
+
+    $jsonData = file_get_contents($filePath);
+
+    $registers = json_decode($jsonData, true);
+
+    if (!is_array($registers)) {
+        return null; 
+    }
+
+    foreach ($registers as $register) {
+        if ($register['id'] === $registerId) {
+            return $register;
+        }
+    }
+
+    return null; 
+  }
+
+  static public function updateProductCategoryById($projectId, $updatedData) {
+    global $CONFIG;
+
+    $filePath = $CONFIG['CONF']['cacheDir'] . '/catalog-categories.json';
+
+    if (!file_exists($filePath)) {
+        return ['success' => false, 'message' => 'Arquivo catalog-categories.json não encontrado.'];
+    }
+
+    $jsonData = file_get_contents($filePath);
+
+    $projects = json_decode($jsonData, true);
+
+    if (!is_array($projects)) {
+        return ['success' => false, 'message' => 'Erro ao ler o arquivo catalog-categories.json.'];
+    }
+
+    $projectIndex = array_search($projectId, array_column($projects, 'id'));
+
+    if ($projectIndex === false) {
+        return ['success' => false, 'message' => 'Register note found.'];
+    }
+
+    $projects[$projectIndex] = array_merge($projects[$projectIndex], $updatedData);
+
+    if (file_put_contents($filePath, json_encode($projects, JSON_PRETTY_PRINT)) === false) {
+        return ['success' => false, 'message' => 'Erro ao salvar o arquivo categories.json.'];
+    }
+
+    Auth::logUserAction($projectId, 'update users');
+    return ['success' => true, 'message' => 'Register atualizado com sucesso.'];
+
+   }
 
   // show category item
   static public function isCategoryItem($id, $field) {

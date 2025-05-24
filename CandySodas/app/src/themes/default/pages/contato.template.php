@@ -3,15 +3,37 @@ include('../../../config.inc.php');
 $baseUrl = $CONFIG['CONF']['siteUrl'];
 $pageId = "index";
 $pageTitle = "Contato";
+// load seo content
+$title = Cms::getSiteConfigurationData('defaultPageTitle')." | ".$pageTitle;
+$autor = Cms::getSiteConfigurationData('author');
+$description = Cms::getSiteConfigurationData('description');
+$keywords = Cms::getSiteConfigurationData('keywords');
+$keywords = Cms::getSiteConfigurationData('keywords');
+$favicon = Cms::getSiteConfigurationData('favicon');
+$published = date('Y-m-d');
+$siteUrl = $CONFIG['CONF']['siteUrl'];
 ?>
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="utf-8"/>
-    <title> Balboa Comércio Serviços &amp; Importação e Exportação Ltda - <?= $pageTitle; ?></title>
-    <meta name="description" content="Creative Agency, Marketing Agency Template">
-    <meta name="keywords" content="Creative Agency, Marketing Agency">
-    <meta name="author" content="rajesh-doot">
+     <?php 
+         Seo::seoRenderAttributes([
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords,
+            'image' => $image,
+            'published' => $published,
+            'author' => $autor,
+            'type' => 'Article',
+            'breadcrumbs' => [
+               ['name' => 'Home', 'url' => $siteUrl],
+               ['name' => 'Contato', 'url' => $siteUrl.'/contato.html'],
+               ['name' => 'Produtos', 'url' => $siteUrl.'/produtos.html']
+            ],
+            'index' => true
+            ]);
+   ?>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="images/favicon.png" rel="icon">

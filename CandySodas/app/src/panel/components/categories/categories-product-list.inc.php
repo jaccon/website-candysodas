@@ -1,7 +1,7 @@
 <?php 
 global $CONFIG;
 
-$jsonFilePath = $CONFIG['CONF']['cacheDir'].'/catalog.json';
+$jsonFilePath = $CONFIG['CONF']['cacheDir'].'/catalog-categories.json';
 $datas = [];
 
 if (file_exists($jsonFilePath)) {
@@ -22,20 +22,11 @@ if (file_exists($jsonFilePath)) {
     }
 }
 
-$projectsFile = '../../cached/categories.json';
+$projectsFile = '../../cached/catalog-categories.json';
 $projectsData = file_exists($projectsFile) ? json_decode(file_get_contents($projectsFile), true) : [];
 
-function getPageUrl($page, $perPage) {
-    $params = $_GET;
-    $params['page'] = $page;
-    $params['perPage'] = $perPage;
-    return '?' . http_build_query($params);
-}
-
-$itemsPerPage = isset($_GET['perPage']) ? (int)$_GET['perPage'] : 10;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-$paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
-
+$paginatedData = helperProjects::paginate($datas, $page, 10);
 ?>
 
 <div class="col-xl-12">
@@ -48,7 +39,7 @@ $paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
                   <tr class="fs-7 fw-bold text-gray-500 border-bottom-0">
                       <th class="p-0 pb-3 text-start"> <?= TABLE_TITLE; ?> </th>
                       <th class="p-0 pb-3 text-end"> <?= TABLE_CREATED; ?> </th>
-                      <th class="p-0 pb-3 text-end"> Product Type </th>
+                      <th class="p-0 pb-3 text-end"> <?= CAT_03; ?> </th>
                       <th class="p-0 pb-3 text-end"> Status </th>
                       <th class="p-0 pb-3 text-end pe-7"> <?= TABLE_ACTION; ?> </th>
                   </tr>
@@ -61,16 +52,8 @@ $paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
                               <td>
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex justify-content-start flex-column">
-                                      <a href="catalog-product-update.html?id=<?= $item['id']; ?>" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">
-                                        <img 
-                                            src="<?= $CONFIG['CONF']['uploadUrl']."/products/".$item['featuredImage']; ?>" 
-                                            alt="Product Image" 
-                                            class="w-50px h-50px me-3"
-                                            onerror="this.onerror=null;this.src='<?= $CONFIG['CONF']['siteUrl']; ?>/panel/assets/media/no-image.jpg';"
-                                        >
-                                        <?= htmlspecialchars($item['title']); ?> <br/>
-                                        <span class="text-gray-400 fw-semibold d-block fs-7">
-                                          SKU: <?= htmlspecialchars($item['sku']); ?>
+                                      <a href="categories-product-update.html?id=<?= $item['id']; ?>" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">
+                                        <?= htmlspecialchars($item['title']); ?> 
                                       </a>
                                     </div>
                                 </div>
@@ -83,16 +66,16 @@ $paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
                               </td>
                               
                               <td class="text-end pe-2">
-                                <?= ($item['productType']);?>
+                                <?= ($item['categoryType']);?>
                               </td>
 
-                              <td class="text-end pe-2">
-                                 <?= Admin::statusBaghets($item['status']); ?>
+                              <td class="text-end pe-0">
+                                <?= $item['status']; ?>
                               </td>
 
                               <td class="text-end pe-0">
 
-                                <a href="catalog-product-update?id=<?= $item['id']; ?>" alt="Edit data" title="Edit data"> 
+                                <a href="categories-update.html?id=<?= $item['id']; ?>" alt="Edit data" title="Edit data"> 
                                     <i class="ki-duotone ki-pencil">
                                       <span class="path1"></span>
                                       <span class="path2"></span>
@@ -123,37 +106,21 @@ $paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
                   
                   </table>
 
-                  <div class="d-flex justify-content-between align-items-center mt-4">
-                        <div class="d-flex align-items-center">
-                            <div class="text-muted me-4">
-                                Total Records: <span class="fw-bold"><?= count($datas) ?></span>
-                                <span class="mx-2">|</span>
-                                Showing: <span class="fw-bold"><?= ($paginatedData['pagination']['current_page'] - 1) * $itemsPerPage + 1 ?>-<?= min($paginatedData['pagination']['current_page'] * $itemsPerPage, count($datas)) ?></span>
-                            </div>
-                            <select class="form-select form-select-sm w-auto" id="perPageSelect" onchange="changeItemsPerPage(this.value)">
-                                <option value="10" <?= $itemsPerPage === 10 ? 'selected' : '' ?>>10 per page</option>
-                                <option value="100" <?= $itemsPerPage === 100 ? 'selected' : '' ?>>100 per page</option>
-                                <option value="500" <?= $itemsPerPage === 500 ? 'selected' : '' ?>>500 per page</option>
-                                <option value="1000" <?= $itemsPerPage === 1000 ? 'selected' : '' ?>>1000 per page</option>
-                            </select>
-                        </div>
-
-                        <ul class="pagination pagination-circle pagination-outline">
-                            <li class="page-item previous <?= $paginatedData['pagination']['current_page'] === 1 ? 'disabled' : '' ?> m-1">
-                                <a href="<?= getPageUrl($paginatedData['pagination']['current_page'] - 1, $itemsPerPage) ?>" 
-                                    class="page-link"><i class="previous"></i></a>
+                  <ul class="pagination pagination-circle pagination-outline">
+                      <li class="page-item previous <?= $paginatedData['pagination']['current_page'] === 1 ? 'disabled' : '' ?> m-1">
+                          <a href="<?= $paginatedData['pagination']['current_page'] > 1 ? '?page=' . ($paginatedData['pagination']['current_page'] - 1) : '#' ?>" 
+                            class="page-link"><i class="previous"></i></a>
+                      </li>
+                        <?php for ($i = 1; $i <= $paginatedData['pagination']['total_pages']; $i++): ?>
+                            <li class="page-item m-1 <?= $i === $paginatedData['pagination']['current_page'] ? 'active' : '' ?>">
+                                <a href="?page=<?= $i ?>" class="page-link"><?= $i ?></a>
                             </li>
-                            <?php for ($i = 1; $i <= $paginatedData['pagination']['total_pages']; $i++): ?>
-                                <li class="page-item m-1 <?= $i === $paginatedData['pagination']['current_page'] ? 'active' : '' ?>">
-                                    <a href="<?= getPageUrl($i, $itemsPerPage) ?>" class="page-link"><?= $i ?></a>
-                                </li>
-                            <?php endfor; ?>
-                            <li class="page-item next <?= $paginatedData['pagination']['current_page'] === $paginatedData['pagination']['total_pages'] ? 'disabled' : '' ?> m-1">
-                                <a href="<?= getPageUrl($paginatedData['pagination']['current_page'] + 1, $itemsPerPage) ?>" 
-                                    class="page-link"><i class="next"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                        <?php endfor; ?>
+                      <li class="page-item next <?= $paginatedData['pagination']['current_page'] === $paginatedData['pagination']['total_pages'] ? 'disabled' : '' ?> m-1">
+                          <a href="<?= $paginatedData['pagination']['current_page'] < $paginatedData['pagination']['total_pages'] ? '?page=' . ($paginatedData['pagination']['current_page'] + 1) : '#' ?>" 
+                            class="page-link"><i class="next"></i></a>
+                      </li>
+                  </ul>
 
           </div>
       </div>
@@ -206,14 +173,6 @@ $paginatedData = helperProjects::paginate($datas, $page, $itemsPerPage);
             });
         }
     });
-}
-
-// Add to your existing <script> section
-function changeItemsPerPage(value) {
-    const url = new URL(window.location.href);
-    url.searchParams.set('perPage', value);
-    url.searchParams.set('page', 1); // Reset to first page when changing items per page
-    window.location.href = url.toString();
 }
 
 </script>
